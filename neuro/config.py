@@ -37,23 +37,22 @@ LABELED_FILE = os.path.join(DATA_DIR, "labeled.tsv")
 # ─── Архитектура модели ───────────────────────────────────────────────────────
 
 # Размер символьного эмбеддинга
-EMBED_DIM = 64
+EMBED_DIM = 128
 
 # Количество голов внимания
-NUM_HEADS = 4
+NUM_HEADS = 8
 
 # Размер скрытого слоя в Feed-Forward Network
-FF_DIM = 256
+FF_DIM = 512
 
 # Количество слоёв Transformer Encoder
-NUM_LAYERS = 2
+NUM_LAYERS = 4
 
 # Размерность выходного вектора
-OUTPUT_DIM = 128
+OUTPUT_DIM = 256
 
 # Максимальная длина входной последовательности (символов)
-# Названия товаров обычно 5-25 символов — 32 достаточно
-MAX_SEQ_LEN = 32
+MAX_SEQ_LEN = 128
 
 # Dropout для регуляризации (предотвращает переобучение)
 DROPOUT_RATE = 0.1
@@ -71,7 +70,7 @@ MIN_LEARNING_RATE = 1e-5
 BATCH_SIZE = 256
 
 # Количество эпох
-EPOCHS = 50
+EPOCHS = 100
 
 # Margin для Triplet Loss (минимальный запас между positive и negative)
 TRIPLET_MARGIN = 0.3
