@@ -36,20 +36,20 @@ LABELED_FILE = os.path.join(DATA_DIR, "labeled.tsv")
 
 # ─── Архитектура модели ───────────────────────────────────────────────────────
 
-# Размер символьного эмбеддинга (каждый символ → вектор этой размерности)
-EMBED_DIM = 128
+# Размер символьного эмбеддинга
+EMBED_DIM = 64
 
-# Количество голов внимания в каждом Transformer-блоке
-NUM_HEADS = 8
+# Количество голов внимания
+NUM_HEADS = 4
 
-# Размер скрытого слоя в Feed-Forward Network внутри Transformer
-FF_DIM = 512
+# Размер скрытого слоя в Feed-Forward Network
+FF_DIM = 256
 
-# Количество слоёв Transformer Encoder (глубина модели)
-NUM_LAYERS = 4
+# Количество слоёв Transformer Encoder
+NUM_LAYERS = 2
 
-# Размерность выходного вектора (финальный эмбеддинг товара)
-OUTPUT_DIM = 256
+# Размерность выходного вектора
+OUTPUT_DIM = 128
 
 # Максимальная длина входной последовательности (символов)
 MAX_SEQ_LEN = 128
@@ -66,12 +66,11 @@ LEARNING_RATE = 3e-4
 # Минимальный learning rate (конечная точка cosine decay)
 MIN_LEARNING_RATE = 1e-5
 
-# Размер батча (количество троек за один шаг)
-# На слабой машине (8 ГБ RAM) рекомендуется 64
-BATCH_SIZE = 64
+# Размер батча
+BATCH_SIZE = 256
 
-# Количество эпох обучения
-EPOCHS = 100
+# Количество эпох
+EPOCHS = 50
 
 # Margin для Triplet Loss (минимальный запас между positive и negative)
 TRIPLET_MARGIN = 0.3

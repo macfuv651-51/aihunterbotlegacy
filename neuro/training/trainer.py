@@ -85,7 +85,6 @@ class Trainer:
         )
         return tf.keras.optimizers.Adam(learning_rate=lr_schedule)
 
-    @tf.function(reduce_retracing=True, jit_compile=False)
     def _train_step(
         self,
         anchor_ids: tf.Tensor,
