@@ -85,7 +85,7 @@ class Trainer:
         )
         return tf.keras.optimizers.Adam(learning_rate=lr_schedule)
 
-    @tf.function
+    @tf.function(reduce_retracing=True, jit_compile=False)
     def _train_step(
         self,
         anchor_ids: tf.Tensor,
@@ -151,7 +151,8 @@ class Trainer:
             {epoch, loss, recall@1, recall@5, mrr}.
         """
         # Считаем шаги для cosine decay schedule
-        steps_per_epoch = sum(1 for _ in train_dataset)
+        card = int(train_dataset.cardinality())
+        steps_per_epoch = card if card > 0 else 512
         total_steps = steps_per_epoch * epochs
         optimizer = self._build_optimizer(total_steps)
 
