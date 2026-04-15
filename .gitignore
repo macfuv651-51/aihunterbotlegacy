@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# TensorFlow / ML weights (большие бинарные файлы)
+neuro/weights/*.h5
+neuro/weights/*.keras
+neuro/index/
+*.index
+*.faiss
+
+# Большие датасеты
+neuro/data/triplets_preview.json
+
+# Конфиг с секретами (API ключи, токены, телефон)
+hunter/config.py
+
+# Telethon сессии (содержат секреты)
+*.session
+*.session-journal
+
+# Логи
+logs/
+*.log
+*.log.*
+
+# Системные
+.DS_Store
+*.swp
+*.swo
+
+# Кэш pytest
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/

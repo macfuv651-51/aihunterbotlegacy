@@ -1,0 +1,10 @@
+{
+  "telethon_enabled": false,
+  "chats": [
+    {
+      "id": "-1001043755419",
+      "title": "Apple/samsung/dyson",
+      "enabled": true
+    }
+  ]
+}

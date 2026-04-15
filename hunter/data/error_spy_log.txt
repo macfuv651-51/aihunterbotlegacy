@@ -1,0 +1,143 @@
+{
+    "timestamp": "2026-03-02T11:40:36.511028+00:00",
+    "message_id": 5289857,
+    "user_id": 7317115941,
+    "username": "TigvaOfficial",
+    "first_name": "Tigva",
+    "last_name": "",
+    "query": "MacBook MC6T4 Air 13 M4, 16GB, 256GB) 2025 \nмиднайт \nскай блю",
+    "products": [
+      "iPad AIR 13 M3 256 wifi blue"
+    ]
+},
+
+{
+    "timestamp": "2026-03-02T11:52:44.820153+00:00",
+    "message_id": 5289991,
+    "user_id": 47348597,
+    "username": "renata006",
+    "first_name": "Рената С1-092",
+    "last_name": "",
+    "query": "куплю AirPods Max 2 Blue",
+    "products": [
+      "AirPods MAX USB-C blue"
+    ]
+},
+
+{
+    "timestamp": "2026-03-02T11:54:06.559040+00:00",
+    "message_id": 5290009,
+    "user_id": 5201070591,
+    "username": "Anvar_Nurlan",
+    "first_name": "MisterKeremet",
+    "last_name": "",
+    "query": "Куплю \n\n17 Pro 512gb бел 1-сим - 1",
+    "products": [
+      "17 PRO 512 orange (1Sim+eSim)"
+    ]
+},
+
+{
+    "timestamp": "2026-03-02T12:00:48.922806+00:00",
+    "message_id": 5290078,
+    "user_id": 5722525120,
+    "username": "Apple_Bear_5555",
+    "first_name": "Apple Bear",
+    "last_name": "🍏",
+    "query": "AirPods 4 usb-c \n17 256gb black e-sim",
+    "products": [
+      "17 256 black (1Sim+eSim)"
+    ]
+},
+
+{
+    "timestamp": "2026-03-02T12:13:17.741535+00:00",
+    "message_id": 5290251,
+    "user_id": 6044599389,
+    "username": "Dstore_mk",
+    "first_name": "DStore",
+    "last_name": "",
+    "query": "куплю\nSeries 11, 46mm (Jet Black)\n\n17 Pro Max 512 Blue 1сим\n17 Pro max 512 Orange esim \n\nS26 Ultra 12/256 Black \nS26 Plus 12/256 Гб 5G Голубой",
+    "products": [
+      "S11 46 jet black",
+      "s25 ultra 12/256 jetblack"
+    ]
+},
+
+{
+    "timestamp": "2026-03-02T14:57:37.506108+00:00",
+    "message_id": 5291916,
+    "user_id": 5673438035,
+    "username": "koloBok_3225",
+    "first_name": "Сергей",
+    "last_name": "",
+    "query": "MacBook Air 15 M4 24GB 512GB \nStarlight ?\nMidnight ?\nSky Blue ?\nSilver ?",
+    "products": [
+      "iPad AIR 13 M3 256 wifi blue"
+    ]
+},
+
+{
+    "timestamp": "2026-03-03T07:41:54.834856+00:00",
+    "message_id": 5292875,
+    "user_id": 8065547850,
+    "username": "icitystore1",
+    "first_name": "Айсити ❤️💜 самые главные",
+    "last_name": "",
+    "query": "Apple MacBook Air 13 M4 (16/256Gb)\nMC6T4 Sky Blue",
+    "products": [
+      "MC7A4 AIR 15 M4 16/256 sky blue"
+    ]
+},
+
+{
+    "timestamp": "2026-03-03T10:48:01.843018+00:00",
+    "message_id": 5295397,
+    "user_id": 1197143314,
+    "username": "ceo_melior",
+    "first_name": "Тимофей",
+    "last_name": "Melior Store 🍏",
+    "query": "MacBook Air 15\" M4 24/512\n\n• Sky Blue\n• Silver \n• Midnight\n• Starlight",
+    "products": [
+      "iPad AIR 13 M3 256 wifi blue"
+    ]
+},
+
+{
+    "timestamp": "2026-03-04T09:41:48.413941+00:00",
+    "message_id": 5301156,
+    "user_id": 8354392110,
+    "username": "RPoint_store",
+    "first_name": "RP Manager",
+    "last_name": "",
+    "query": "Предложите: iPhone 17 pro 256gb sim + eSIM",
+    "products": [
+      "17 pro 256 orange (eSim)"
+    ]
+},
+
+{
+    "timestamp": "2026-03-04T10:57:05.992100+00:00",
+    "message_id": 5302456,
+    "user_id": 67781642,
+    "username": "Garsia22",
+    "first_name": "Энди Гарсия",
+    "last_name": "",
+    "query": "S26 Ultra 12/256 Black\nКуплю",
+    "products": [
+      "s25 ultra 12/256 jetblack"
+    ]
+},
+
+{
+    "timestamp": "2026-03-04T10:59:46.643609+00:00",
+    "message_id": 5302494,
+    "user_id": 55566011,
+    "username": "romario1",
+    "first_name": "ᖇᏫmᎯᖇᎲᏫ",
+    "last_name": "",
+    "query": "iPhone 17 Pro 1Tb\nCosmic Orange \n1Sim-?",
+    "products": [
+      "17 PRO 1TB  silver (1Sim+eSim)"
+    ]
+},

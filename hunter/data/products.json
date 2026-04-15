@@ -1,0 +1,532 @@
+[
+  {
+    "name": "S10 42 Jet Black SL 🇺🇸",
+    "price": "23300.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S10",
+    "variant": "42",
+    "keywords": []
+  },
+  {
+    "name": "S10 46 Jet Black SL 🇺🇸",
+    "price": "24800.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S10",
+    "variant": "46",
+    "keywords": []
+  },
+  {
+    "name": "S10 46 Rose Gold (M/L) 🇺🇸",
+    "price": "25000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S10",
+    "variant": "46",
+    "keywords": []
+  },
+  {
+    "name": "S9 45 Midnight (S/M) 🇺🇸",
+    "price": "21100.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S9",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "S9 45 Starlight (S/M) 🇺🇸",
+    "price": "21100.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S9",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "SE2 44 Midnight SB (M/L) 2024 🇺🇸",
+    "price": "17500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "SE2",
+    "variant": "44",
+    "keywords": []
+  },
+  {
+    "name": "SE2 44 midnight SM",
+    "price": "16200.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "SE2",
+    "variant": "44",
+    "keywords": []
+  },
+  {
+    "name": "UL 2 Black / Black OB (2024) 🇺🇸",
+    "price": "50000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 2",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 2 Black / Black Titan Milanese Loop S (2024) 🇺🇸",
+    "price": "55000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 2",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Natural / Light Blue AL(L) 🇺🇸",
+    "price": "65500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Natural / Blue/Bright Blue TL(S/M) 🇺🇸",
+    "price": "65500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Natural / Anchor Blue OB 🇺🇸",
+    "price": "65500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Light Blue AL(M) 🇺🇸",
+    "price": "61000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black AL(S) 🇺🇸",
+    "price": "60000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black AL(M) 🇺🇸",
+    "price": "60000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black AL(L) 🇺🇸",
+    "price": "60500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black/Charcoal TL(S/M) 🇺🇸",
+    "price": "61000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black/Charcoal TL(M/L) 🇺🇸",
+    "price": "60000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black OB 🇺🇸",
+    "price": "57500.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "UL 3 Black / Black Titanium Milanese Loop (L) 🇺🇸",
+    "price": "74000.00",
+    "available": true,
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "",
+    "keywords": []
+  },
+  {
+    "name": "SE3 40 Midnight(S/M) 2025",
+    "price": "18500",
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "SE3",
+    "variant": "40",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "SE3 40 Starlight(S/M) 2025",
+    "price": "19500",
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "SE3",
+    "variant": "40",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "S11 46 Jet Black(M/L) 🇺🇸",
+    "price": "28000",
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "S11",
+    "variant": "46",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "ULTRA 3 Black / Black Ocean Band",
+    "price": "57500",
+    "brand": "🍎 Apple",
+    "category": "⌚ Apple Watch",
+    "subcategory": "ULTRA 3",
+    "variant": "Black",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "iPad 11 A16 128 wifi blue",
+    "price": "27900",
+    "brand": "🍎 Apple",
+    "category": "📱 iPad",
+    "subcategory": "iPad 11",
+    "variant": "128",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "iPad 11 A16 128 wifi silver",
+    "price": "28800",
+    "brand": "🍎 Apple",
+    "category": "📱 iPad",
+    "subcategory": "iPad 11",
+    "variant": "128",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "iPad 11 A16 256 wifi pink",
+    "price": "36700",
+    "brand": "🍎 Apple",
+    "category": "📱 iPad",
+    "subcategory": "iPad 11",
+    "variant": "256",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "iPad AIR 11 M4 256 wifi space gray",
+    "price": "57500",
+    "brand": "🍎 Apple",
+    "category": "📱 iPad",
+    "subcategory": "iPad AIR 11",
+    "variant": "256",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "iPad AIR 13 M4 512 LTE space gray",
+    "price": "120000",
+    "brand": "🍎 Apple",
+    "category": "📱 iPad",
+    "subcategory": "iPad AIR 13",
+    "variant": "512",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "Magic Mouse USB-C black",
+    "price": "7800",
+    "brand": "🍎 Apple",
+    "category": "🖱️ Accessories",
+    "subcategory": "Mouse",
+    "variant": "black",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW0Y3 AIR 13 M4 16/256 starlight",
+    "price": "80500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW123 AIR 13 M4 16/256 midnight",
+    "price": "80500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC6T4 AIR 13 M4 16/256 sky blue",
+    "price": "80500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW0X3 AIR 13 M4 16/512 silver",
+    "price": "90500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC6U4 AIR 13 M4 16/512 sky blue",
+    "price": "91500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW133 AIR 13 M4 16/512 midnight",
+    "price": "92500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW103 AIR 13 M4 16/512 starlight",
+    "price": "93500",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC6C4 AIR 13 M4 24/512 midnight",
+    "price": "116000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC654 AIR 13 M4 24/512 silver",
+    "price": "116000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC6V4 AIR 13 M4 24/512 sky blue",
+    "price": "116000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC7A4 AIR 15 M4 16/256 sky blue",
+    "price": "97000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW1L3 AIR 15 M4 16/256 midnight",
+    "price": "97000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW1J3 AIR 15 M4 16/256 starlight",
+    "price": "97000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC7C4 AIR 15 M4 16/512 sky blue",
+    "price": "110000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MW1M3 AIR 15 M4 16/512 midnight",
+    "price": "109000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MC6K4 AIR 15 M4 24/512 starlight",
+    "price": "130000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M4",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDHJ4 AIR 13 M5 16/1TB sky blue",
+    "price": "108000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDH84 AIR 13 M5 16/1TB silver",
+    "price": "108000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDHK4 AIR 13 M5 24/1TB sky blue",
+    "price": "124000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDH94 AIR 13 M5 24/1TB silver",
+    "price": "124000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 13",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDVT4 AIR 15 M5 16/1TB sky blue",
+    "price": "127000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDVN4 AIR 15 M5 24/1TB midnight",
+    "price": "147000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  },
+  {
+    "name": "MDVU4 AIR 15 M5 24/1TB sky blue",
+    "price": "147000",
+    "brand": "🍎 Apple",
+    "category": "💻 MacBook",
+    "subcategory": "Air 15",
+    "variant": "M5",
+    "available": true,
+    "keywords": []
+  }
+]

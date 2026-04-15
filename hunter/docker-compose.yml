@@ -1,0 +1,14 @@
+services:
+  hunter:
+    build: .
+    container_name: sstore-hunter
+    restart: always
+    volumes:
+      - ./seller_session.session:/app/seller_session.session
+      - ./data:/app/data
+      - ./logs:/app/logs
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M

@@ -1,0 +1,1976 @@
+{
+  "buy_intent": [
+    "куплю",
+    "хочу купить",
+    "приобрету",
+    "хочу приобрести",
+    "готов купить"
+  ],
+  "search": [
+    "ищу",
+    "ищем",
+    "нужен",
+    "нужна",
+    "нужно",
+    "нужны",
+    "разыскиваю",
+    "в поиске"
+  ],
+  "interest": [
+    "интересует",
+    "интересуюсь",
+    "посоветуйте",
+    "где купить",
+    "где взять",
+    "где найти",
+    "подскажите"
+  ],
+  "selling": [
+    "продайте",
+    "продаёте",
+    "продаете",
+    "продается",
+    "в наличии есть",
+    "есть в наличии"
+  ],
+  "price_inquiry": [
+    "почем",
+    "почём",
+    "сколько стоит",
+    "сколько стоят",
+    "цена",
+    "цены",
+    "прайс",
+    "стоимость",
+    "расценки"
+  ],
+  "product_names": [
+    "iphone",
+    "айфон",
+    "ipad",
+    "айпад",
+    "samsung",
+    "самсунг",
+    "xiaomi",
+    "сяоми",
+    "ноутбук",
+    "телефон",
+    "смартфон",
+    "планшет",
+    "наушники",
+    "часы",
+    "про макс",
+    "pro max",
+    "про мах",
+    "16 pro",
+    "16 plus",
+    "16+",
+    "16 pro max",
+    "16е",
+    "16e",
+    "15 pro",
+    "15 plus",
+    "15+",
+    "15 pro max",
+    "14 plus",
+    "14+",
+    "ipad pro",
+    "ipad air",
+    "ipad mini",
+    "ipad 11",
+    "айпад про",
+    "айпад эйр",
+    "айпад мини",
+    "airpods",
+    "аирподс",
+    "airpods pro",
+    "airpods max",
+    "airpods 4",
+    "apple watch",
+    "watch s",
+    "watch se",
+    "watch ultra",
+    "ultra 2",
+    "ultra 3",
+    "macbook",
+    "макбук",
+    "mac air",
+    "mac pro",
+    "magic mouse",
+    "apple pencil",
+    "airtag",
+    "airtag 4",
+    "m4",
+    "m5",
+    "mw",
+    "mc",
+    "md",
+    "ar13",
+    "ar15",
+    "ar 13",
+    "ar 15",
+    "galaxy",
+    "галакси",
+    "s24 ultra",
+    "s25",
+    "s25 fe",
+    "s25 plus",
+    "s25 ultra",
+    "z flip",
+    "z fold",
+    "galaxy z",
+    "зет флип",
+    "зет фолд"
+  ],
+
+  "product_aliases": {
+    "_comment": "Ключ = канонический EN-запрос для поиска в БД. Значение = любые варианты от пользователей.",
+
+    "_note": "Сокращения: пм/pm = pro max, ᵖᵒ/po = pro, эйр/аир = air",
+
+    "17 pro max": [
+      "айфон 17 про макс", "iphone 17 pro max",
+      "17пм", "17pm", "17 pm", "17promax", "17промакс"
+    ],
+
+    "17 pro": [
+      "айфон 17 про", "iphone 17 pro",
+      "17про", "17pro"
+    ],
+
+    "17 air": [
+      "айфон 17 эйр", "айфон 17 аир", "iphone 17 air",
+      "17эйр", "17аир", "17air"
+    ],
+
+    "iphone 17": [
+      "айфон 17"
+    ],
+
+    "17 pro max 256 silver": [
+      "17пм 256 серебро", "17пм 256 сильвер", "17pm 256 silver",
+      "17 pro max 256 silver", "iphone 17 pro max 256 silver"
+    ],
+
+    "17 pro max 256 blue": [
+      "17пм 256 блю", "17пм 256 блу", "17пм 256 синий", "17pm 256 blue",
+      "17 pro max 256 blue", "iphone 17 pro max 256 blue"
+    ],
+
+    "17 pro max 256 orange": [
+      "17пм 256 оранж", "17пм 256 оранжевый", "17pm 256 orange",
+      "17 pro max 256 orange", "iphone 17 pro max 256 orange"
+    ],
+
+    "17 pro max 512 silver": [
+      "17пм 512 серебро", "17пм 512 сильвер", "17pm 512 silver",
+      "17 pro max 512 silver", "iphone 17 pro max 512 silver"
+    ],
+
+    "17 pro max 512 blue": [
+      "17пм 512 блю", "17пм 512 блу", "17пм 512 синий", "17pm 512 blue",
+      "17 pro max 512 blue", "iphone 17 pro max 512 blue"
+    ],
+
+    "17 pro max 512 orange": [
+      "17пм 512 оранж", "17пм 512 оранжевый", "17pm 512 orange",
+      "17 pro max 512 orange", "iphone 17 pro max 512 orange"
+    ],
+
+    "17 pro max 1tb silver": [
+      "айфон 17 про макс 1тб серебро",
+      "айфон 17 про макс 1тб сильвер",
+      "iphone 17 pro max 1tb silver",
+      "17пм 1тб серебро", "17пм 1тб сильвер",
+      "17pm 1tb silver", "17 pm 1tb silver",
+      "17 pro max 1tb silver"
+    ],
+
+    "17 pro max 1tb blue": [
+      "17пм 1тб блю", "17пм 1тб блу", "17пм 1тб синий", "17pm 1tb blue",
+      "17 pro max 1tb blue", "iphone 17 pro max 1tb blue"
+    ],
+
+    "17 pro max 1tb cosmic orange": [
+      "17пм 1тб оранж", "17пм 1тб оранжевый", "17pm 1tb orange",
+      "17 pro max 1tb orange", "iphone 17 pro max 1tb orange",
+      "17 pro max 1tb cosmic orange", "iphone 17 pro max 1tb cosmic orange"
+    ],
+
+    "17 pro max 2tb silver": [
+      "17пм 2тб серебро", "17пм 2тб сильвер", "17pm 2tb silver",
+      "17 pro max 2tb silver"
+    ],
+
+    "17 pro max 2tb blue": [
+      "17пм 2тб блю", "17пм 2тб блу", "17пм 2тб синий", "17pm 2tb blue",
+      "17 pro max 2tb blue"
+    ],
+
+    "17 pro max 2tb orange": [
+      "17пм 2тб оранж", "17пм 2тб оранжевый", "17pm 2tb orange",
+      "17 pro max 2tb orange"
+    ],
+
+    "17 pro 256 silver": [
+      "айфон 17 про 256 серебро",
+      "17про 256 серебро", "17pro 256 silver",
+      "17 pro 256 silver", "iphone 17 pro 256 silver"
+    ],
+
+    
+
+    "17 pro 512 silver": [
+      "17про 512 серебро", "17pro 512 silver",
+      "17 pro 512 silver", "iphone 17 pro 512 silver"
+    ],
+
+    "17 pro 512 blue": [
+      "17про 512 блю", "17про 512 блу", "17про 512 синий", "17pro 512 blue",
+      "17 pro 512 blue", "iphone 17 pro 512 blue"
+    ],
+
+    "17 pro 512 orange": [
+      "17про 512 оранж", "17про 512 оранжевый", "17pro 512 orange",
+      "17 pro 512 orange", "iphone 17 pro 512 orange"
+    ],
+
+    "17 pro 1tb silver": [
+      "17про 1тб серебро", "17pro 1tb silver",
+      "17 pro 1tb silver", "iphone 17 pro 1tb silver"
+    ],
+
+    "17 pro 1tb deep blue": [
+      "17про 1тб блю", "17про 1тб блу", "17про 1тб синий",
+      "17 pro 1tb blue", "iphone 17 pro 1tb blue",
+      "17pro 1tb deep blue", "17 pro 1tb deep blue"
+    ],
+
+    "17 pro 1tb orange": [
+      "17про 1тб оранж", "17про 1тб оранжевый",
+      "17 pro 1tb orange", "iphone 17 pro 1tb orange",
+      "17 pro 1tb cosmic orange", "iphone 17 pro 1tb cosmic orange",
+      "1tb cosmic orange", "cosmic orange"
+    ],
+
+    "17 air 512 gold": [
+      "17 эйр 512 голд", "17эйр 512 золото", "17air 512 gold"
+    ],
+
+    "17 air 1tb white": [
+      "17 эйр 1тб белый", "17эйр 1тб уайт"
+    ],
+
+    "17 air 1tb gold": [
+      "17 эйр 1тб голд", "17эйр 1тб золото"
+    ],
+
+    "17 air 1tb blue": [
+      "17 эйр 1тб синий", "17эйр 1тб блю"
+    ],
+
+    "17 256 black": [
+      "айфон 17 256 черный", "17 256 черный",
+      "17 256 блэк", "17 256 чёрный"
+    ],
+
+    "17 256 white": [
+      "айфон 17 256 белый", "17 256 белый",
+      "17 256 уайт", "17 256 вайт"
+    ],
+
+    "17 256 sage": [
+      "айфон 17 256 сейдж", "17 256 сейдж",
+      "17 256 шалфей"
+    ],
+
+    "17 256 lavender": [
+      "айфон 17 256 лаванда", "17 256 лаванда",
+      "17 256 лавандовый", "17 256 лавандер"
+    ],
+
+    "17 512 black": [
+      "айфон 17 512 черный", "17 512 черный",
+      "17 512 блэк", "17 512 чёрный"
+    ],
+
+    "17 512 white": [
+      "айфон 17 512 белый", "17 512 белый",
+      "17 512 уайт"
+    ],
+
+    "17 512 blue": [
+      "айфон 17 512 синий", "17 512 блю",
+      "17 512 синий", "17 512 блу"
+    ],
+
+    "17 512 sage": [
+      "айфон 17 512 сейдж", "17 512 сейдж",
+      "17 512 шалфей"
+    ],
+
+    "17 512 lavender": [
+      "айфон 17 512 лаванда", "17 512 лаванда",
+      "17 512 лавандовый"
+    ],
+
+    "17 256 mist blue": [
+      "17 256 мист блю", "17 256 туманный синий",
+      "iphone 17 256 mist blue", "айфон 17 256 мист блю",
+      "17 256 blue", "17 256 синий", "17 256 блю"
+    ],
+
+    "17 air 256 black": [
+      "17 эйр 256 черный", "17эйр 256 черный",
+      "17 эйр 256 блэк", "17air 256 black",
+      "iphone 17 air 256 black"
+    ],
+
+    "17 air 256 white": [
+      "17 эйр 256 белый", "17эйр 256 белый",
+      "17 эйр 256 уайт", "17air 256 white",
+      "iphone 17 air 256 white"
+    ],
+
+    "17 pro 256 deep blue": [
+      "17про 256 дип блю", "17про 256 тёмно-синий",
+      "17pro 256 deep blue", "iphone 17 pro 256 deep blue",
+      "17 pro 256 deep blue",
+      "17про 256 блю", "17про 256 блу", "17про 256 синий",
+      "17pro 256 blue", "17 pro 256 blue", "iphone 17 pro 256 blue"
+    ],
+
+    "17 pro 256 cosmic orange": [
+      "17про 256 космик оранж", "17про 256 космический оранжевый",
+      "17pro 256 cosmic orange", "iphone 17 pro 256 cosmic orange",
+      "17 pro 256 cosmic orange", "17про 256 оранж", "17 pro 256 orange"
+    ],
+
+    "17 pro 512 cosmic orange": [
+      "17про 512 космик оранж", "17про 512 космический оранжевый",
+      "17pro 512 cosmic orange", "iphone 17 pro 512 cosmic orange",
+      "17 pro 512 cosmic orange"
+    ],
+
+    "17 pro max 256 deep blue": [
+      "17пм 256 дип блю", "17пм 256 тёмно-синий",
+      "17pm 256 deep blue", "iphone 17 pro max 256 deep blue",
+      "17 pro max 256 deep blue"
+    ],
+
+    "17 pro max 256 cosmic orange": [
+      "17пм 256 космик оранж", "17пм 256 космический оранжевый",
+      "17pm 256 cosmic orange", "iphone 17 pro max 256 cosmic orange",
+      "17 pro max 256 cosmic orange",
+      "17 mac 256 orange", "17 mac 256 cosmic orange",
+      "17 mac 256 оранж"
+    ],
+
+    "17 pro max 512 cosmic orange": [
+      "17пм 512 космик оранж", "17пм 512 космический оранжевый",
+      "17pm 512 cosmic orange", "iphone 17 pro max 512 cosmic orange",
+      "17 pro max 512 cosmic orange"
+    ],
+
+    "15 128 black": [
+      "айфон 15 128 черный", "15 128 черный", "15 128 блэк",
+      "15 128гб черный", "15 128gb black", "15/128 black",
+      "iphone 15 128 black", "15128 black"
+    ],
+
+    "15 128 blue": [
+      "айфон 15 128 синий", "15 128 синий", "15 128 блю", "15 128 блу",
+      "15 128гб синий", "15 128gb blue", "15/128 blue",
+      "iphone 15 128 blue", "15128 blue"
+    ],
+
+    "15 128 pink": [
+      "айфон 15 128 розовый", "15 128 розовый", "15 128 пинк",
+      "15 128гб розовый", "15 128gb pink", "15/128 pink",
+      "iphone 15 128 pink", "15128 pink"
+    ],
+
+    "15 128 midnight": [
+      "айфон 15 128 миднайт", "15 128 миднайт", "15 128 полночный",
+      "15 128гб миднайт", "15 128gb midnight", "15/128 midnight",
+      "iphone 15 128 midnight", "15128 midnight"
+    ],
+
+    "15 256 pink": [
+      "айфон 15 256 розовый", "15 256 розовый", "15 256 пинк",
+      "15 256гб розовый", "15 256gb pink", "15/256 pink",
+      "iphone 15 256 pink", "15256 pink"
+    ],
+
+    "15 256 midnight": [
+      "айфон 15 256 миднайт", "15 256 миднайт", "15 256 полночный",
+      "15 256гб миднайт", "15 256gb midnight", "15/256 midnight",
+      "iphone 15 256 midnight", "15256 midnight"
+    ],
+
+    "15 512 midnight": [
+      "айфон 15 512 миднайт", "15 512 миднайт",
+      "15 512гб миднайт", "15 512gb midnight", "15/512 midnight",
+      "iphone 15 512 midnight"
+    ],
+
+    "15 512 green": [
+      "айфон 15 512 зеленый", "15 512 зеленый", "15 512 зелёный",
+      "15 512гб зеленый", "15 512gb green", "15/512 green",
+      "iphone 15 512 green"
+    ],
+
+    "15 512 pink": [
+      "айфон 15 512 розовый", "15 512 розовый", "15 512 пинк",
+      "15 512гб розовый", "15 512gb pink", "15/512 pink",
+      "iphone 15 512 pink"
+    ],
+
+    "15 512 blue": [
+      "айфон 15 512 синий", "15 512 синий", "15 512 блю",
+      "15 512гб синий", "15 512gb blue", "15/512 blue",
+      "iphone 15 512 blue"
+    ],
+
+    "15 512 yellow": [
+      "айфон 15 512 желтый", "15 512 желтый", "15 512 жёлтый",
+      "15 512гб желтый", "15 512gb yellow", "15/512 yellow",
+      "iphone 15 512 yellow"
+    ],
+
+    "15 plus 128 midnight": [
+      "15+ 128 миднайт", "15плюс 128 миднайт",
+      "15+ 128gb midnight", "15+/128 midnight",
+      "iphone 15 plus 128 midnight", "15plus 128 midnight"
+    ],
+
+    "15 plus 128 green": [
+      "15+ 128 зеленый", "15плюс 128 зеленый", "15+ 128 зелёный",
+      "15+ 128gb green", "15+/128 green",
+      "iphone 15 plus 128 green", "15plus 128 green"
+    ],
+
+    "15 plus 128 pink": [
+      "15+ 128 розовый", "15плюс 128 розовый", "15+ 128 пинк",
+      "15+ 128gb pink", "15+/128 pink",
+      "iphone 15 plus 128 pink", "15plus 128 pink"
+    ],
+
+    "15 plus 256 green": [
+      "15+ 256 зеленый", "15плюс 256 зеленый", "15+ 256 зелёный",
+      "15+ 256gb green", "15+/256 green",
+      "iphone 15 plus 256 green", "15plus 256 green"
+    ],
+
+    "15 plus 256 pink": [
+      "15+ 256 розовый", "15плюс 256 розовый", "15+ 256 пинк",
+      "15+ 256gb pink", "15+/256 pink",
+      "iphone 15 plus 256 pink", "15plus 256 pink"
+    ],
+
+    "15 plus 256 yellow": [
+      "15+ 256 желтый", "15плюс 256 желтый", "15+ 256 жёлтый",
+      "15+ 256gb yellow", "15+/256 yellow",
+      "iphone 15 plus 256 yellow", "15plus 256 yellow"
+    ],
+
+    "15 plus 512 midnight": [
+      "15+ 512 миднайт", "15плюс 512 миднайт",
+      "15+ 512gb midnight", "15+/512 midnight",
+      "iphone 15 plus 512 midnight", "15plus 512 midnight"
+    ],
+
+    "15 plus 512 pink": [
+      "15+ 512 розовый", "15плюс 512 розовый", "15+ 512 пинк",
+      "15+ 512gb pink", "15+/512 pink",
+      "iphone 15 plus 512 pink", "15plus 512 pink"
+    ],
+
+    "15 plus 512 blue": [
+      "15+ 512 синий", "15плюс 512 синий", "15+ 512 блю",
+      "15+ 512gb blue", "15+/512 blue",
+      "iphone 15 plus 512 blue", "15plus 512 blue"
+    ],
+
+    "15 plus 512 green": [
+      "15+ 512 зеленый", "15плюс 512 зеленый", "15+ 512 зелёный",
+      "15+ 512gb green", "15+/512 green",
+      "iphone 15 plus 512 green", "15plus 512 green"
+    ],
+
+    "15 plus 512 yellow": [
+      "15+ 512 желтый", "15плюс 512 желтый", "15+ 512 жёлтый",
+      "15+ 512gb yellow", "15+/512 yellow",
+      "iphone 15 plus 512 yellow", "15plus 512 yellow"
+    ],
+
+    "15 pro 128 black": [
+      "15 про 128 черный", "15про 128 черный", "15 про 128 блэк",
+      "15 pro 128gb black", "15pro/128 black", "15/128 pro black",
+      "iphone 15 pro 128 black", "15pro 128 black"
+    ],
+
+    "15 pro 128 white": [
+      "15 про 128 белый", "15про 128 белый", "15 про 128 уайт",
+      "15 pro 128gb white", "15pro/128 white",
+      "iphone 15 pro 128 white", "15pro 128 white"
+    ],
+
+    "15 pro 128 blue": [
+      "15 про 128 синий", "15про 128 синий", "15 про 128 блю",
+      "15 pro 128gb blue", "15pro/128 blue",
+      "iphone 15 pro 128 blue", "15pro 128 blue"
+    ],
+
+    "15 pro 128 natural": [
+      "15 про 128 натурал", "15про 128 натурал", "15 про 128 натуральный",
+      "15 pro 128gb natural", "15pro/128 natural",
+      "iphone 15 pro 128 natural", "15pro 128 natural"
+    ],
+
+    "15 pro 256 blue": [
+      "15 про 256 синий", "15про 256 синий", "15 про 256 блю",
+      "15 pro 256gb blue", "15pro/256 blue",
+      "iphone 15 pro 256 blue", "15pro 256 blue"
+    ],
+
+    "15 pro 512 black": [
+      "15 про 512 черный", "15про 512 черный", "15 про 512 блэк",
+      "15 pro 512gb black", "15pro/512 black",
+      "iphone 15 pro 512 black", "15pro 512 black"
+    ],
+
+    "15 pro 512 white": [
+      "15 про 512 белый", "15про 512 белый", "15 про 512 уайт",
+      "15 pro 512gb white", "15pro/512 white",
+      "iphone 15 pro 512 white", "15pro 512 white"
+    ],
+
+    "15 pro 512 blue": [
+      "15 про 512 синий", "15про 512 синий", "15 про 512 блю",
+      "15 pro 512gb blue", "15pro/512 blue",
+      "iphone 15 pro 512 blue", "15pro 512 blue"
+    ],
+
+    "15 pro 512 natural": [
+      "15 про 512 натурал", "15про 512 натурал", "15 про 512 натуральный",
+      "15 pro 512gb natural", "15pro/512 natural",
+      "iphone 15 pro 512 natural", "15pro 512 natural"
+    ],
+
+    "15 pro 1tb black": [
+      "15 про 1тб черный", "15про 1тб черный",
+      "15 pro 1tb black", "iphone 15 pro 1tb black", "15pro 1tb black"
+    ],
+
+    "15 pro 1tb white": [
+      "15 про 1тб белый", "15про 1тб белый", "15 про 1тб уайт",
+      "15 pro 1tb white", "iphone 15 pro 1tb white", "15pro 1tb white"
+    ],
+
+    "15 pro 1tb blue": [
+      "15 про 1тб синий", "15про 1тб синий", "15 про 1тб блю",
+      "15 pro 1tb blue", "iphone 15 pro 1tb blue", "15pro 1tb blue"
+    ],
+
+    "15 pro max 256 white": [
+      "15пм 256 белый", "15 пм 256 белый", "15пм 256 уайт",
+      "15pm 256 white", "15pm/256 white",
+      "iphone 15 pro max 256 white", "15 pro max 256 white"
+    ],
+
+    "15 pro max 256 blue": [
+      "15пм 256 синий", "15 пм 256 синий", "15пм 256 блю",
+      "15pm 256 blue", "15pm/256 blue",
+      "iphone 15 pro max 256 blue", "15 pro max 256 blue"
+    ],
+
+    "15 pro max 256 natural": [
+      "15пм 256 натурал", "15 пм 256 натурал", "15пм 256 натуральный",
+      "15pm 256 natural", "15pm/256 natural",
+      "iphone 15 pro max 256 natural", "15 pro max 256 natural"
+    ],
+
+    "15 pro max 512 black": [
+      "15пм 512 черный", "15 пм 512 черный", "15пм 512 блэк",
+      "15pm 512 black", "15pm/512 black",
+      "iphone 15 pro max 512 black", "15 pro max 512 black"
+    ],
+
+    "15 pro max 512 white": [
+      "15пм 512 белый", "15 пм 512 белый", "15пм 512 уайт",
+      "15pm 512 white", "15pm/512 white",
+      "iphone 15 pro max 512 white", "15 pro max 512 white"
+    ],
+
+    "15 pro max 512 blue": [
+      "15пм 512 синий", "15 пм 512 синий", "15пм 512 блю",
+      "15pm 512 blue", "15pm/512 blue",
+      "iphone 15 pro max 512 blue", "15 pro max 512 blue"
+    ],
+
+    "15 pro max 512 natural": [
+      "15пм 512 натурал", "15 пм 512 натурал", "15пм 512 натуральный",
+      "15pm 512 natural", "15pm/512 natural",
+      "iphone 15 pro max 512 natural", "15 pro max 512 natural"
+    ],
+
+    "15 pro max 1tb black": [
+      "15пм 1тб черный", "15 пм 1тб черный", "15пм 1тб блэк",
+      "15pm 1tb black", "iphone 15 pro max 1tb black", "15 pro max 1tb black"
+    ],
+
+    "15 pro max 1tb white": [
+      "15пм 1тб белый", "15 пм 1тб белый", "15пм 1тб уайт",
+      "15pm 1tb white", "iphone 15 pro max 1tb white", "15 pro max 1tb white"
+    ],
+
+    "15 pro max 1tb blue": [
+      "15пм 1тб синий", "15 пм 1тб синий", "15пм 1тб блю",
+      "15pm 1tb blue", "iphone 15 pro max 1tb blue", "15 pro max 1tb blue"
+    ],
+
+    "15 pro max 1tb natural": [
+      "15пм 1тб натурал", "15 пм 1тб натурал", "15пм 1тб натуральный",
+      "15pm 1tb natural", "iphone 15 pro max 1tb natural", "15 pro max 1tb natural"
+    ],
+
+    "16 128 black": [
+      "айфон 16 128 черный", "айф 16 128 черный",
+      "16 128 черный", "16 128 блэк", "16 128 блек",
+      "16 128гб черный", "16 128gb black", "16/128 black", "16/128 черный",
+      "iphone 16 128 black", "16128 black", "16128black"
+    ],
+
+    "16 128 white": [
+      "айфон 16 128 белый", "16 128 белый", "16 128 уайт", "16 128 вайт",
+      "16 128гб белый", "16 128gb white", "16/128 white", "16/128 белый",
+      "iphone 16 128 white", "16128 white", "16128white"
+    ],
+
+    "16 128 teal": [
+      "айфон 16 128 тил", "16 128 тил", "16 128 бирюзовый", "16 128 бирюза",
+      "16 128гб тил", "16 128gb teal", "16/128 teal", "16/128 тил",
+      "iphone 16 128 teal", "16128 teal"
+    ],
+
+    "16 128 ultramarine": [
+      "айфон 16 128 ультрамарин", "16 128 ультрамарин",
+      "16 128гб ультрамарин", "16 128gb ultramarine",
+      "16/128 ultramarine", "16/128 ультрамарин",
+      "iphone 16 128 ultramarine", "16128 ultramarine"
+    ],
+
+    "16 256 black": [
+      "айфон 16 256 черный", "16 256 черный", "16 256 блэк", "16 256 блек",
+      "16 256гб черный", "16 256gb black", "16/256 black", "16/256 черный",
+      "iphone 16 256 black", "16256 black", "16256black"
+    ],
+
+    "16 256 white": [
+      "айфон 16 256 белый", "16 256 белый", "16 256 уайт", "16 256 вайт",
+      "16 256гб белый", "16 256gb white", "16/256 white", "16/256 белый",
+      "iphone 16 256 white", "16256 white"
+    ],
+
+    "16 256 pink": [
+      "айфон 16 256 розовый", "16 256 розовый", "16 256 пинк",
+      "16 256гб розовый", "16 256gb pink", "16/256 pink", "16/256 розовый",
+      "iphone 16 256 pink", "16256 pink"
+    ],
+
+    "16 256 teal": [
+      "айфон 16 256 тил", "16 256 тил", "16 256 бирюзовый", "16 256 бирюза",
+      "16 256гб тил", "16 256gb teal", "16/256 teal", "16/256 тил",
+      "iphone 16 256 teal", "16256 teal"
+    ],
+
+    "16 256 ultramarine": [
+      "айфон 16 256 ультрамарин", "16 256 ультрамарин",
+      "16 256гб ультрамарин", "16 256gb ultramarine",
+      "16/256 ultramarine", "16/256 ультрамарин",
+      "iphone 16 256 ultramarine", "16256 ultramarine"
+    ],
+
+    "16 512 black": [
+      "айфон 16 512 черный", "16 512 черный", "16 512 блэк", "16 512 блек",
+      "16 512гб черный", "16 512gb black", "16/512 black", "16/512 черный",
+      "iphone 16 512 black", "16512 black"
+    ],
+
+    "16 512 white": [
+      "айфон 16 512 белый", "16 512 белый", "16 512 уайт", "16 512 вайт",
+      "16 512гб белый", "16 512gb white", "16/512 white", "16/512 белый",
+      "iphone 16 512 white", "16512 white"
+    ],
+
+    "16 512 teal": [
+      "айфон 16 512 тил", "16 512 тил", "16 512 бирюзовый", "16 512 бирюза",
+      "16 512гб тил", "16 512gb teal", "16/512 teal", "16/512 тил",
+      "iphone 16 512 teal", "16512 teal"
+    ],
+
+    "16 512 ultramarine": [
+      "айфон 16 512 ультрамарин", "16 512 ультрамарин",
+      "16 512гб ультрамарин", "16 512gb ultramarine",
+      "16/512 ultramarine", "16/512 ультрамарин",
+      "iphone 16 512 ultramarine", "16512 ultramarine"
+    ],
+
+    "16e 128 white": [
+      "16е 128 белый", "16е 128 уайт", "16е 128 вайт",
+      "16е 128гб белый", "16е 128gb white", "16e/128 white",
+      "iphone 16e 128 white", "16e 128 white", "16е128 белый"
+    ],
+
+    "16e 128 black": [
+      "16е 128 черный", "16е 128 блэк", "16е 128 блек",
+      "16е 128гб черный", "16е 128gb black", "16e/128 black",
+      "iphone 16e 128 black", "16e 128 black", "16е128 черный"
+    ],
+
+    "16e 256 black": [
+      "16е 256 черный", "16е 256 блэк", "16е 256 блек",
+      "16е 256гб черный", "16е 256gb black", "16e/256 black",
+      "iphone 16e 256 black", "16e 256 black", "16е256 черный"
+    ],
+
+    "16e 512 white": [
+      "16е 512 белый", "16е 512 уайт", "16е 512 вайт",
+      "16е 512гб белый", "16е 512gb white", "16e/512 white",
+      "iphone 16e 512 white", "16e 512 white", "16е512 белый"
+    ],
+
+    "16 plus 128 black": [
+      "16+ 128 черный", "16+ 128 блэк", "16плюс 128 черный",
+      "16+ 128гб черный", "16+ 128gb black", "16+/128 black",
+      "iphone 16 plus 128 black", "16plus 128 black", "16plus128 black"
+    ],
+
+    "16 plus 128 white": [
+      "16+ 128 белый", "16+ 128 уайт", "16плюс 128 белый",
+      "16+ 128гб белый", "16+ 128gb white", "16+/128 white",
+      "iphone 16 plus 128 white", "16plus 128 white"
+    ],
+
+    "16 plus 128 pink": [
+      "16+ 128 розовый", "16+ 128 пинк", "16плюс 128 розовый",
+      "16+ 128гб розовый", "16+ 128gb pink", "16+/128 pink",
+      "iphone 16 plus 128 pink", "16plus 128 pink"
+    ],
+
+    "16 plus 128 teal": [
+      "16+ 128 тил", "16+ 128 бирюзовый", "16плюс 128 тил",
+      "16+ 128гб тил", "16+ 128gb teal", "16+/128 teal",
+      "iphone 16 plus 128 teal", "16plus 128 teal"
+    ],
+
+    "16 plus 128 ultramarine": [
+      "16+ 128 ультрамарин", "16плюс 128 ультрамарин",
+      "16+ 128гб ультрамарин", "16+ 128gb ultramarine", "16+/128 ultramarine",
+      "iphone 16 plus 128 ultramarine", "16plus 128 ultramarine"
+    ],
+
+    "16 plus 256 black": [
+      "16+ 256 черный", "16+ 256 блэк", "16плюс 256 черный",
+      "16+ 256гб черный", "16+ 256gb black", "16+/256 black",
+      "iphone 16 plus 256 black", "16plus 256 black"
+    ],
+
+    "16 plus 256 white": [
+      "16+ 256 белый", "16+ 256 уайт", "16плюс 256 белый",
+      "16+ 256гб белый", "16+ 256gb white", "16+/256 white",
+      "iphone 16 plus 256 white", "16plus 256 white"
+    ],
+
+    "16 plus 256 pink": [
+      "16+ 256 розовый", "16+ 256 пинк", "16плюс 256 розовый",
+      "16+ 256гб розовый", "16+ 256gb pink", "16+/256 pink",
+      "iphone 16 plus 256 pink", "16plus 256 pink"
+    ],
+
+    "16 plus 256 teal": [
+      "16+ 256 тил", "16+ 256 бирюзовый", "16плюс 256 тил", "16плюс 256 бирюзовый",
+      "16+ 256гб тил", "16+ 256gb teal", "16+/256 teal",
+      "iphone 16 plus 256 teal", "16plus 256 teal"
+    ],
+
+    "16 plus 256 ultramarine": [
+      "16+ 256 ультрамарин", "16плюс 256 ультрамарин",
+      "16+ 256гб ультрамарин", "16+ 256gb ultramarine", "16+/256 ultramarine",
+      "iphone 16 plus 256 ultramarine", "16plus 256 ultramarine"
+    ],
+
+    "16 plus 512 black": [
+      "16+ 512 черный", "16+ 512 блэк", "16плюс 512 черный",
+      "16+ 512гб черный", "16+ 512gb black", "16+/512 black",
+      "iphone 16 plus 512 black", "16plus 512 black"
+    ],
+
+    "16 plus 512 pink": [
+      "16+ 512 розовый", "16+ 512 пинк", "16плюс 512 розовый",
+      "16+ 512гб розовый", "16+ 512gb pink", "16+/512 pink",
+      "iphone 16 plus 512 pink", "16plus 512 pink"
+    ],
+
+    "16 plus 512 teal": [
+      "16+ 512 тил", "16+ 512 бирюзовый", "16плюс 512 тил",
+      "16+ 512гб тил", "16+ 512gb teal", "16+/512 teal",
+      "iphone 16 plus 512 teal", "16plus 512 teal"
+    ],
+
+    "16 plus 512 ultramarine": [
+      "16+ 512 ультрамарин", "16плюс 512 ультрамарин",
+      "16+ 512гб ультрамарин", "16+ 512gb ultramarine", "16+/512 ultramarine",
+      "iphone 16 plus 512 ultramarine", "16plus 512 ultramarine"
+    ],
+
+        "16 pro 256 white": [
+      "16 про 256 белый", "16 pro 256 white titanium", "iphone 16 pro 256 white"
+    ],
+    "16 pro 256 black": [
+      "16 про 256 черный", "16 pro 256 black titanium", "iphone 16 pro 256 black"
+    ],
+    "16 pro 256 natural": [
+      "16 про 256 натуральный", "iphone 16 pro 256 natural"
+    ],
+    "16 pro 256 desert": [
+      "16 про 256 дезерт", "iphone 16 pro 256 desert"
+    ],
+    "16 pro 128 desert": [
+      "16 про 128 дезерт", "16 про 128 пустынный", "16про 128 дезерт",
+      "16 про 128гб дезерт", "16 pro 128gb desert", "16pro/128 desert",
+      "iphone 16 pro 128 desert", "16pro 128 desert"
+    ],
+
+    "16 pro 128 white": [
+      "16 про 128 белый", "16 про 128 уайт", "16про 128 белый",
+      "16 про 128гб белый", "16 pro 128gb white", "16pro/128 white",
+      "iphone 16 pro 128 white", "16pro 128 white"
+    ],
+
+    "16 pro 128 natural": [
+      "16 про 128 натуральный", "16 про 128 натурал", "16про 128 натурал",
+      "16 про 128гб натурал", "16 pro 128gb natural", "16pro/128 natural",
+      "iphone 16 pro 128 natural", "16pro 128 natural"
+    ],
+
+    "16 pro 1tb white": [
+      "16 про 1тб белый", "16 про 1тб уайт", "16про 1тб белый",
+      "16 pro 1tb white", "iphone 16 pro 1tb white", "16pro 1tb white"
+    ],
+
+    "16 pro 1tb natural": [
+      "16 про 1тб натуральный", "16 про 1тб натурал", "16про 1тб натурал",
+      "16 pro 1tb natural", "iphone 16 pro 1tb natural", "16pro 1tb natural"
+    ],
+
+    "16 pro max 256 desert": [
+      "16пм 256 дезерт", "16 пм 256 дезерт", "16 пм 256 пустынный",
+      "16пм 256гб дезерт", "16pm 256gb desert", "16pm/256 desert",
+      "16pm 256 desert", "iphone 16 pro max 256 desert",
+      "16 pro max 256 desert"
+    ],
+
+    "16 pro max 1tb white": [
+      "16пм 1тб белый", "16 пм 1тб белый", "16 пм 1тб уайт",
+      "16pm 1tb white", "iphone 16 pro max 1tb white",
+      "16 pro max 1tb white"
+    ],
+
+    "16 pro max 1tb desert": [
+      "16пм 1тб дезерт", "16 пм 1тб дезерт", "16 пм 1тб пустынный",
+      "16pm 1tb desert", "iphone 16 pro max 1tb desert",
+      "16 pro max 1tb desert"
+    ],
+
+    "14 128 midnight": [
+      "айфон 14 128 миднайт", "14 128 миднайт", "14 128 полночный",
+      "14 128gb midnight", "14/128 midnight", "iphone 14 128 midnight"
+    ],
+    "14 128 starlight": [
+      "айфон 14 128 старлайт", "14 128 старлайт", "14 128 звёздный",
+      "14 128gb starlight", "14/128 starlight", "iphone 14 128 starlight"
+    ],
+    "14 128 blue": [
+      "айфон 14 128 синий", "14 128 синий", "14 128 блю",
+      "14 128gb blue", "14/128 blue", "iphone 14 128 blue"
+    ],
+    "14 256 midnight": [
+      "айфон 14 256 миднайт", "14 256 миднайт",
+      "14 256gb midnight", "14/256 midnight", "iphone 14 256 midnight"
+    ],
+    "14 256 yellow": [
+      "айфон 14 256 желтый", "14 256 желтый", "14 256 жёлтый",
+      "14 256gb yellow", "14/256 yellow", "iphone 14 256 yellow"
+    ],
+    "14 512 midnight": [
+      "айфон 14 512 миднайт", "14 512 миднайт",
+      "14 512gb midnight", "14/512 midnight", "iphone 14 512 midnight"
+    ],
+    "14 512 starlight": [
+      "айфон 14 512 старлайт", "14 512 старлайт",
+      "14 512gb starlight", "14/512 starlight", "iphone 14 512 starlight"
+    ],
+    "14 512 red": [
+      "айфон 14 512 красный", "14 512 красный",
+      "14 512gb red", "14/512 red", "iphone 14 512 red"
+    ],
+    "14 512 purple": [
+      "айфон 14 512 фиолетовый", "14 512 фиолетовый",
+      "14 512gb purple", "14/512 purple", "iphone 14 512 purple"
+    ],
+    "14 512 blue": [
+      "айфон 14 512 синий", "14 512 синий", "14 512 блю",
+      "14 512gb blue", "14/512 blue", "iphone 14 512 blue"
+    ],
+    "14 512 yellow": [
+      "айфон 14 512 желтый", "14 512 желтый",
+      "14 512gb yellow", "14/512 yellow", "iphone 14 512 yellow"
+    ],
+
+    "14 plus 128 yellow": [
+      "14+ 128 желтый", "14плюс 128 желтый", "14 плюс 128 желтый",
+      "14+ 128gb yellow", "14+/128 yellow", "iphone 14 plus 128 yellow"
+    ],
+    "14 plus 256 midnight": [
+      "14+ 256 миднайт", "14плюс 256 миднайт", "14 плюс 256 миднайт",
+      "14+ 256gb midnight", "iphone 14 plus 256 midnight"
+    ],
+    "14 plus 256 red": [
+      "14+ 256 красный", "14плюс 256 красный",
+      "14+ 256gb red", "iphone 14 plus 256 red"
+    ],
+    "14 plus 256 purple": [
+      "14+ 256 фиолетовый", "14плюс 256 фиолетовый",
+      "14+ 256gb purple", "iphone 14 plus 256 purple"
+    ],
+    "14 plus 256 blue": [
+      "14+ 256 синий", "14плюс 256 синий", "14+ 256 блю",
+      "14+ 256gb blue", "iphone 14 plus 256 blue"
+    ],
+    "14 plus 256 yellow": [
+      "14+ 256 желтый", "14плюс 256 желтый",
+      "14+ 256gb yellow", "iphone 14 plus 256 yellow"
+    ],
+    "14 plus 512 yellow": [
+      "14+ 512 желтый", "14плюс 512 желтый",
+      "14+ 512gb yellow", "iphone 14 plus 512 yellow"
+    ],
+
+    "13 128 midnight": [
+      "айфон 13 128 миднайт", "13 128 миднайт",
+      "13 128gb midnight", "13/128 midnight", "iphone 13 128 midnight"
+    ],
+    "13 128 starlight": [
+      "айфон 13 128 старлайт", "13 128 старлайт",
+      "13 128gb starlight", "13/128 starlight", "iphone 13 128 starlight"
+    ],
+
+    "12 128 purple": [
+      "айфон 12 128 фиолетовый", "12 128 фиолетовый",
+      "12 128gb purple", "12/128 purple", "iphone 12 128 purple"
+    ],
+
+    "ipad 11 128 silver wifi": [
+      "айпад 11 128 сильвер вайфай", "ipad 11 128 silver wi-fi",
+      "айпад 11 128 серебро wifi", "ipad11 128 silver wifi",
+      "ipad 11 128 wifi silver"
+    ],
+    "ipad 11 128 blue wifi": [
+      "айпад 11 128 блю вайфай", "ipad 11 128 blue wi-fi",
+      "айпад 11 128 синий wifi", "ipad11 128 blue wifi"
+    ],
+    "ipad 11 128 pink wifi": [
+      "айпад 11 128 пинк вайфай", "ipad 11 128 pink wi-fi",
+      "айпад 11 128 розовый wifi", "ipad11 128 pink wifi"
+    ],
+    "ipad 11 128 yellow wifi": [
+      "айпад 11 128 желтый вайфай", "ipad 11 128 yellow wi-fi",
+      "ipad11 128 yellow wifi"
+    ],
+    "ipad 11 256 silver wifi": [
+      "айпад 11 256 сильвер вайфай", "ipad 11 256 silver wi-fi",
+      "айпад 11 256 серебро wifi", "ipad11 256 silver wifi"
+    ,
+      "ipad 11 a 16 256 wifi silver", "ipad 11 a 16 256 silver"
+    ],
+    "ipad 11 256 blue wifi": [
+      "айпад 11 256 блю вайфай", "ipad 11 256 blue wi-fi",
+      "айпад 11 256 синий wifi", "ipad11 256 blue wifi"
+    ,
+      "ipad 11 a 16 256 wifi blue"
+    ],
+    "ipad 11 256 pink wifi": [
+      "айпад 11 256 пинк вайфай", "ipad 11 256 pink wi-fi",
+      "ipad11 256 pink wifi"
+    ,
+      "ipad 11 a 16 256 wifi pink"
+    ],
+    "ipad 11 256 yellow wifi": [
+      "айпад 11 256 желтый вайфай", "ipad 11 256 yellow wi-fi",
+      "ipad11 256 yellow wifi"
+    ,
+      "ipad 11 a 16 256 wifi yellow"
+    ],
+    "ipad 11 512 blue wifi": [
+      "айпад 11 512 блю вайфай", "ipad 11 512 blue wi-fi",
+      "айпад 11 512 синий wifi", "ipad11 512 blue wifi"
+    ],
+
+    "ipad air 13 m3 128 purple lte": [
+      "айпад эйр 13 м3 128 фиолетовый лте",
+      "ipad air 13 m3 128 purple cellular",
+      "айпад аир 13 m3 128 purple lte"
+    ],
+    "ipad air 11 m3 128 wifi gray": [
+      "ipad air 11 m3 128 gray wifi", "айпад эйр 11 м3 128 серый",
+      "ipad air 11 m3 128 wf gray",
+      "ipad air 11 m3 128 wifi space gray", "ipad air 11 m3 128 space gray wifi"
+    ],
+    "ipad air 11 m3 128 wifi starlight": [
+      "ipad air 11 m3 128 starlight wifi", "айпад эйр 11 м3 128 старлайт",
+      "ipad air 11 m3 128 wf starlight"
+    ],
+    "ipad air 11 m3 128 wifi purple": [
+      "ipad air 11 m3 128 purple wifi", "айпад эйр 11 м3 128 фиолетовый",
+      "ipad air 11 m3 128 wf purple"
+    ],
+    "ipad air 11 m3 128 wifi blue": [
+      "ipad air 11 m3 128 blue wifi", "айпад эйр 11 м3 128 синий",
+      "ipad air 11 m3 128 wf blue"
+    ],
+    "ipad air 11 m3 256 gray wifi": [
+      "айпад эйр 11 м3 256 серый вайфай",
+      "ipad air 11 m3 256 grey wi-fi",
+      "айпад аир 11 m3 256 gray wifi",
+      "ipad air 11 m3 256 wifi space gray", "ipad air 11 m3 256 space gray wifi"
+    ],
+    "ipad air 11 m3 256 wifi blue": [
+      "ipad air 11 m3 256 blue wifi", "айпад эйр 11 м3 256 синий",
+      "ipad air 11 m3 256 wf blue"
+    ],
+    "ipad air 11 m3 256 wifi purple": [
+      "ipad air 11 m3 256 purple wifi", "айпад эйр 11 м3 256 фиолетовый",
+      "ipad air 11 m3 256 wf purple"
+    ],
+    "ipad air 11 m3 256 wifi starlight": [
+      "ipad air 11 m3 256 starlight wifi", "айпад эйр 11 м3 256 старлайт",
+      "ipad air 11 m3 256 wf starlight"
+    ],
+    "ipad air 13 m2 256 wifi black": [
+      "айпад эйр 13 м2 256 вайфай черный",
+      "ipad air 13 m2 256 wi-fi black",
+      "айпад аир 13 m2 256 wifi блэк",
+      "ipad air 13 m2 256 black"
+    ],
+    "ipad air 13 m3 256 wifi gray": [
+      "ipad air 13 m3 256 gray wifi", "айпад эйр 13 м3 256 серый",
+      "ipad air 13 m3 256 wifi space gray", "ipad air 13 m3 256 space gray wifi",
+      "ipad air 13 m3 256 wf gray"
+    ],
+    "ipad air 13 m3 256 wifi blue": [
+      "ipad air 13 m3 256 blue wifi", "айпад эйр 13 м3 256 синий",
+      "ipad air 13 m3 256 wf blue"
+    ],
+    "ipad air 13 m3 256 wifi purple": [
+      "ipad air 13 m3 256 purple wifi", "айпад эйр 13 м3 256 фиолетовый",
+      "ipad air 13 m3 256 wf purple"
+    ],
+    "ipad air 13 m3 256 wifi starlight": [
+      "ipad air 13 m3 256 starlight wifi", "айпад эйр 13 м3 256 старлайт",
+      "ipad air 13 m3 256 wf starlight"
+    ],
+    "ipad air 11 m4 256 wifi space gray": [
+      "ipad air 11 m4 256 space gray wifi",
+      "ipad air 11 m4 256 gray wifi",
+      "айпад эйр 11 м4 256 серый вайфай",
+      "ipad air 11 m4 256 wf gray",
+      "ipad air 11 m4 space gray",
+      "ipad air 11 m4 gray"
+    ],
+    "ipad air 13 m4 512 lte space gray": [
+      "ipad air 13 m4 512 cellular space gray",
+      "ipad air 13 m4 512 gray lte",
+      "айпад эйр 13 м4 512 серый лте",
+      "ipad air 13 m4 512 4g gray",
+      "ipad air 13 m4 lte gray 512"
+    ],
+    "ipad air 13 m4 256 wifi sky blue": [
+      "ipad air 13 m4 256 sky blue wifi",
+      "айпад эйр 13 м4 256 скай блю",
+      "ipad air 13 m4 256 wf sky blue",
+      "ipad air 13 m4 sky blue",
+      "ipad air 13 sky blue m4"
+    ],
+
+    "air 13 m4 16 256 sky blue": [
+      "macbook air 13 m4 16 256 sky blue",
+      "macbook air 13 m4 256 sky blue",
+      "air 13 m4 256 sky blue",
+      "mac air 13 m4 256 sky blue",
+      "mc6t4 air 13 m4 16 256 sky blue",
+      "mc6t4 air 13 m4 sky blue",
+      "mc6t4",
+      "air 13 sky blue m4 256",
+      "air 13 m4 sky blue 256"
+    ],
+
+    "air 13 m4 24 512 sky blue": [
+      "macbook air 13 m4 24 512 sky blue",
+      "macbook air 13 m4 512 sky blue",
+      "air 13 m4 512 sky blue",
+      "mc6v4 air 13 m4 24 512 sky blue",
+      "mc6v4 air 13 m4 sky blue",
+      "mc6v4"
+    ],
+    "air 13 m4 16 512 sky blue": [
+      "macbook air 13 m4 16 512 sky blue",
+      "mc6u4 air 13 m4 16 512 sky blue",
+      "mc6u4 air 13 m4 sky blue",
+      "mc6u4"
+    ],
+
+    "ipad mini 6 256 pink lte": [
+      "айпад мини 6 256 пинк лте",
+      "ipad mini 6 256 pink cellular",
+      "айпад мини 6 256 розовый lte"
+    ],
+
+    "ipad pro 11 m4 256 black wifi": [
+      "айпад про 11 м4 256 черный вайфай",
+      "ipad pro 11 m4 256 black wi-fi"
+    ],
+    "ipad pro 11 m4 256 black lte": [
+      "айпад про 11 м4 256 черный лте",
+      "ipad pro 11 m4 256 black cellular"
+    ],
+    "ipad pro 11 m4 256 silver wifi": [
+      "айпад про 11 м4 256 сильвер вайфай",
+      "ipad pro 11 m4 256 silver wi-fi"
+    ],
+    "ipad pro 13 m4 256 black lte": [
+      "айпад про 13 м4 256 черный лте",
+      "ipad pro 13 m4 256 black cellular"
+    ],
+    "ipad pro 13 m4 256 silver lte": [
+      "айпад про 13 м4 256 сильвер лте",
+      "ipad pro 13 m4 256 silver cellular"
+    ],
+    "ipad pro 11 m5 256 black wifi": [
+      "айпад про 11 м5 256 черный вайфай",
+      "ipad pro 11 m5 256 black wi-fi"
+    ],
+    "ipad pro 11 m5 256 black lte": [
+      "айпад про 11 м5 256 черный лте",
+      "ipad pro 11 m5 256 black cellular"
+    ],
+    "ipad pro 11 m5 256 silver wifi": [
+      "айпад про 11 м5 256 сильвер вайфай",
+      "ipad pro 11 m5 256 silver wi-fi"
+    ],
+    "ipad pro 13 m5 256 silver wifi": [
+      "айпад про 13 м5 256 сильвер вайфай",
+      "ipad pro 13 m5 256 silver wi-fi"
+    ],
+    "ipad pro 11 m4 512 black wifi": [
+      "айпад про 11 м4 512 черный вайфай",
+      "ipad pro 11 m4 512 black wi-fi"
+    ],
+    "ipad pro 11 m4 512 silver wifi": [
+      "айпад про 11 м4 512 сильвер вайфай",
+      "ipad pro 11 m4 512 silver wi-fi"
+    ],
+    "ipad pro 11 m5 512 black wifi": [
+      "айпад про 11 м5 512 черный вайфай",
+      "ipad pro 11 m5 512 black wi-fi",
+      "ipad pro 11 m5 512 wifi black",
+      "ipad pro 11 512 black"
+    ],
+    "ipad pro 11 m5 512 wifi silver": [
+      "айпад про 11 м5 512 вайфай сильвер",
+      "ipad pro 11 m5 512 wi-fi silver",
+      "ipad pro 11 512 silver"
+    ],
+
+    "_comment_airpods": "─── AirPods ───────────────────────────────────────────",
+
+    "airpods 4": [
+      "аирподс 4", "airpods4", "наушники airpods 4", "pods 4"
+    ],
+    "airpods 4 anc": [
+      "аирподс 4 анс", "airpods4 anc", "airpods 4anc", "pods 4 anc"
+    ],
+    "airpods max midnight": [
+      "аирподс макс миднайт", "airpods max usb c midnight",
+      "наушники airpods max midnight"
+    ],
+    "airpods max starlight": [
+      "аирподс макс старлайт", "airpods max usb c starlight"
+    ],
+    "airpods max blue": [
+      "аирподс макс синий", "аирподс макс блю", "airpods max usb c blue",
+      "airpods max sky blue", "аирподс макс скай блю"
+    ],
+    "airpods max purple": [
+      "аирподс макс фиолетовый", "airpods max usb c purple"
+    ],
+    "airpods pro 2": [
+      "аирподс про 2", "airpods pro2", "pods pro 2",
+      "наушники airpods pro 2"
+    ],
+    "airpods pro 3": [
+      "аирподс про 3", "airpods pro3", "pods pro 3",
+      "наушники airpods pro 3"
+    ],
+
+    "_comment_watch_s10": "─── Apple Watch S10 ────────────────────────────────────",
+
+    "s 10 42 jet black": [
+      "watch s10 42 jet black", "apple watch s10 42 jet black",
+      "watch s10 42 black", "часы s10 42 черный", "s10 42 jet black",
+      "apple watch s10 42", "watch series 10 42 jet black",
+      "aw series 10 42 jet black"
+    ],
+    "s 10 46 jet black": [
+      "watch s10 46 jet black", "apple watch s10 46 jet black",
+      "watch s10 46 black", "часы s10 46 черный", "s10 46 jet black"
+    ],
+    "s 10 46 rose gold": [
+      "watch s10 46 rose gold", "apple watch s10 46 rose gold",
+      "часы s10 46 роз голд", "часы s10 46 розовое золото",
+      "s10 46 rose gold"
+    ],
+    "s 10 46 silver": [
+      "watch s10 46 silver", "apple watch s10 46 silver",
+      "часы s10 46 серебро", "часы s10 46 сильвер", "s10 46 silver"
+    ],
+
+    "_comment_watch_s11": "─── Apple Watch S11 ────────────────────────────────────",
+
+    "s 11 42 space gray": [
+      "watch s11 42 space gray", "apple watch s11 42 space gray",
+      "часы s11 42 серый", "часы s11 42 спейс грей",
+      "watch s11 42 gray", "s11 42 space gray"
+    ],
+    "s 11 42 jet black": [
+      "watch s11 42 jet black", "apple watch s11 42 jet black",
+      "watch s11 42 black", "часы s11 42 черный", "s11 42 jet black",
+      "watch series 11 42 jet black", "aw series 11 42 jet black"
+    ],
+    "s 11 42 rose gold": [
+      "watch s11 42 rose gold", "apple watch s11 42 rose gold",
+      "часы s11 42 роз голд", "часы s11 42 розовое золото",
+      "s11 42 rose gold", "watch series 11 42 rose gold",
+      "aw series 11 42 rose gold"
+    ],
+    "s 11 42 silver": [
+      "watch s11 42 silver", "apple watch s11 42 silver",
+      "часы s11 42 серебро", "s11 42 silver"
+    ],
+    "s 11 46 jet black": [
+      "watch s11 46 jet black", "apple watch s11 46 jet black",
+      "watch s11 46 black", "часы s11 46 черный", "s11 46 jet black",
+      "watch series 11 46 jet black", "aw series 11 46 jet black"
+    ],
+    "s 11 46 space gray": [
+      "watch s11 46 space gray", "apple watch s11 46 space gray",
+      "часы s11 46 серый", "часы s11 46 спейс грей", "s11 46 space gray"
+    ],
+    "s 11 46 silver": [
+      "watch s11 46 silver", "apple watch s11 46 silver",
+      "часы s11 46 серебро", "s11 46 silver"
+    ],
+    "s 11 46 rose gold": [
+      "watch s11 46 rose gold", "apple watch s11 46 rose gold",
+      "часы s11 46 роз голд", "s11 46 rose gold",
+      "watch series 11 46 rose gold", "aw series 11 46 rose gold"
+    ],
+    "s 11 46 slate milanese lop ml": [
+      "watch s11 46 slate milanese loop m l",
+      "watch s11 46 slate milanese loop ml",
+      "apple watch s11 46 slate milanese loop m l",
+      "apple watch s11 46 slate milanese loop ml",
+      "s11 46 slate milanese loop m l",
+      "s11 46 slate milanese loop ml"
+    ],
+
+    "_comment_watch_s8s9": "─── Apple Watch S8 / S9 ────────────────────────────────",
+
+    "s 8 41 midnight": [
+      "watch s8 41 midnight", "apple watch s8 41 midnight",
+      "часы s8 41 миднайт", "часы s8 41 черный", "s8 41 midnight"
+    ],
+    "s 9 45 silver": [
+      "watch s9 45 silver", "apple watch s9 45 silver",
+      "часы s9 45 серебро", "s9 45 silver"
+    ],
+    "s 9 45 starlight": [
+      "watch s9 45 starlight", "apple watch s9 45 starlight",
+      "часы s9 45 старлайт", "s9 45 starlight"
+    ],
+    "s 9 45 pink": [
+      "watch s9 45 pink", "apple watch s9 45 pink",
+      "часы s9 45 розовый", "s9 45 pink"
+    ],
+    "s 9 45 midnight sm": [
+      "watch s9 45 midnight s m",
+      "watch s9 45 midnight sm",
+      "apple watch s9 45 midnight s m",
+      "apple watch s9 45 midnight sm",
+      "s9 45 midnight s m",
+      "s9 45 midnight sm"
+    ],
+
+    "_comment_watch_se": "─── Apple Watch SE2 / SE3 ──────────────────────────────",
+
+    "se 2 40 black": [
+      "watch se2 40 black", "apple watch se2 40 black",
+      "часы se2 40 черный", "watch se2 40", "se2 40 black"
+    ],
+    "se 2 40 silver": [
+      "watch se2 40 silver", "apple watch se2 40 silver",
+      "часы se2 40 серебро", "se2 40 silver"
+    ],
+    "se 2 44 midnight": [
+      "watch se2 44 midnight", "apple watch se2 44 midnight",
+      "watch se2 44 black", "часы se2 44 миднайт", "se2 44 midnight"
+    ],
+    "se 3 40 midnight": [
+      "watch se3 40 midnight", "apple watch se3 40 midnight",
+      "часы se3 40 миднайт", "se3 40 midnight"
+    ],
+    "se 3 40 starlight": [
+      "watch se3 40 starlight", "apple watch se3 40 starlight",
+      "часы se3 40 старлайт", "se3 40 starlight"
+    ],
+    "se 3 44 midnight": [
+      "watch se3 44 midnight", "apple watch se3 44 midnight",
+      "часы se3 44 миднайт", "se3 44 midnight"
+    ],
+    "se 3 44 starlight": [
+      "watch se3 44 starlight", "apple watch se3 44 starlight",
+      "часы se3 44 старлайт", "se3 44 starlight"
+    ],
+
+    "_comment_watch_ultra": "─── Apple Watch Ultra 2 / Ultra 3 ─────────────────────",
+
+    "ultra 2 natural": [
+      "watch ultra 2 natural", "apple watch ultra 2 natural",
+      "ul 2 natural", "часы ультра 2 натурал"
+    ],
+    "ultra 2 black": [
+      "watch ultra 2 black", "apple watch ultra 2 black",
+      "ul 2 black", "часы ультра 2 черный",
+      "ul 2 black ob", "ul 2 black ocean band",
+      "ul 2 black titan milanese loop"
+    ],
+    "ultra 3 black": [
+      "watch ultra 3 black", "apple watch ultra 3 black",
+      "ul 3 black", "часы ультра 3 черный", "ultra 3"
+    ],
+    "ultra 3 black anchor blue": [
+      "watch ultra 3 black anchor blue", "apple watch ultra 3 anchor blue",
+      "ul 3 anchor blue", "ul 3 black anchor blue",
+      "часы ультра 3 анкер блю", "ultra 3 anchor blue",
+      "ultra 3 black anchor blue ocean band", "ul 3 anchor blue ob"
+    ],
+
+    "ultra 3 natural": [
+      "watch ultra 3 natural", "apple watch ultra 3 natural",
+      "ul 3 natural", "часы ультра 3 натуральный",
+      "apple watch ultra 3 49 natural milanese m"
+    ],
+    "ultra 3 white": [
+      "watch ultra 3 white", "apple watch ultra 3 white",
+      "ul 3 white", "часы ультра 3 белый"
+    ],
+
+    "_comment_macbook": "─── MacBook ────────────────────────────────────────────",
+
+    "air 15 starlight": [
+      "macbook air 15 starlight", "макбук эйр 15 старлайт",
+      "мак эйр 15 старлайт", "mac air 15 starlight"
+    ],
+    "air 15 sky blue": [
+      "macbook air 15 sky blue", "макбук эйр 15 скай блу",
+      "мак эйр 15 sky blue", "mac air 15 sky blue"
+    ],
+    "air 13 gold": [
+      "macbook air 13 gold", "макбук эйр 13 голд",
+      "мак эйр 13 голд", "mac air 13 gold"
+    ],
+    "air 13 midnight": [
+      "macbook air 13 midnight", "макбук эйр 13 миднайт",
+      "mac air 13 midnight"
+    ],
+    "air 13 starlight": [
+      "macbook air 13 starlight", "макбук эйр 13 старлайт",
+      "mac air 13 starlight"
+    ],
+    "air 13 sky blue": [
+      "macbook air 13 sky blue", "макбук эйр 13 скай блу",
+      "mac air 13 sky blue"
+    ],
+
+    "air 13 m4 256 starlight": [
+      "macbook air 13 m4 256 starlight", "макбук эйр 13 м4 256 старлайт",
+      "air 13 m4 starlight 256", "mac air 13 m4 256 starlight",
+      "mw0y3 air 13 m4 16 256 starliight", "mw0y3 air 13 m4 16 256 starlight",
+      "mw0y3"
+    ],
+    "air 13 m4 16 256 midnight": [
+      "macbook air 13 m4 256 midnight", "макбук эйр 13 м4 256 миднайт",
+      "air 13 m4 midnight 256", "mac air 13 m4 256 midnight",
+      "air 13 m4 256 midnight",
+      "mw123 air 13 m4 16 256 midnight",
+      "mw123"
+    ],
+    "air 13 m4 512 midnight": [
+      "macbook air 13 m4 512 midnight", "макбук эйр 13 м4 512 миднайт",
+      "air 13 m4 midnight 512", "mac air 13 m4 512 midnight",
+      "mw133 air 13 m4 16 512 midniight", "mw133 air 13 m4 16 512 midnight",
+      "mw133"
+    ],
+    "air 13 m3 256 starlight": [
+      "macbook air 13 m3 256 starlight", "макбук эйр 13 м3 256 старлайт",
+      "mn6y3 air 13 m3 256 starlight", "mn6y3 air 13 m3 starlight",
+      "mn6y3"
+    ],
+    "air 13 m4 512 starlight": [
+      "macbook air 13 m4 512 starlight", "макбук эйр 13 м4 512 старлайт",
+      "air 13 m4 starlight 512", "mac air 13 m4 512 starlight",
+      "mw103 air 13 m4 16 512 starlight",
+      "mw103"
+    ],
+    "air 13 m4 512 silver": [
+      "macbook air 13 m4 512 silver", "макбук эйр 13 м4 512 сильвер",
+      "air 13 m4 silver 512", "mac air 13 m4 512 silver",
+      "mw0x3 air 13 m4 16 512 silver",
+      "mw0x3"
+    ],
+    "air 13 m4 24 512 silver": [
+      "macbook air 13 m4 24 512 silver", "макбук эйр 13 м4 24 512 сильвер",
+      "air 13 m4 24gb 512 silver", "mac air 13 m4 24 512 silver",
+      "mc654 air 13 m4 24 512 siilver", "mc654 air 13 m4 24 512 silver",
+      "mc654"
+    ],
+    "air 13 m4 24 512 midnight": [
+      "macbook air 13 m4 24 512 midnight", "макбук эйр 13 м4 24 512 миднайт",
+      "air 13 m4 24gb 512 midnight", "mac air 13 m4 24 512 midnight",
+      "mc6c4 air 13 m4 24 512 midnight", "mc6c4 air 13 m4 24 midnight",
+      "mc6c4"
+    ],
+    "air 15 m4 256 silver": [
+      "macbook air 15 m4 256 silver", "макбук эйр 15 м4 256 сильвер",
+      "air 15 m4 silver 256", "mac air 15 m4 256 silver",
+      "mw1g3 air 15 m4 16 256 silver", "mw1g3 air 15 m4 silver",
+      "mw1g3"
+    ],
+    "air 15 m4 512 silver": [
+      "macbook air 15 m4 512 silver", "макбук эйр 15 м4 512 сильвер",
+      "air 15 m4 silver 512", "mac air 15 m4 512 silver",
+      "mw1h3 air 15 m4 16 512 silver", "mw1h3 air 15 m4 silver",
+      "mw1h3"
+    ],
+    "air 15 m4 24 512 silver": [
+      "macbook air 15 m4 24 512 silver", "макбук эйр 15 м4 24 512 сильвер",
+      "air 15 m4 24gb 512 silver", "mac air 15 m4 24 512 silver",
+      "macbook air 15 m4 24 512", "mac air 15 m4 24 512",
+      "air 15 m4 24 512"
+    ],
+    "air 15 m4 24 1tb silver": [
+      "macbook air 15 m4 24 1tb silver", "макбук эйр 15 м4 24 1тб сильвер",
+      "air 15 m4 24gb 1tb silver", "mac air 15 m4 24 1tb silver",
+      "mc6j4 air 15 m4 24 1tb silver", "mc6j4 air 15 m4 silver",
+      "mc6j4"
+    ],
+    "air 15 m4 24 1tb midnight": [
+      "macbook air 15 m4 24 1tb midnight", "макбук эйр 15 м4 24 1тб миднайт",
+      "air 15 m4 24gb 1tb midnight", "mac air 15 m4 24 1tb midnight",
+      "mdvn4 air 15 m4 24 1tb midnight", "mdvn4 air 15 m4 midnight",
+      "mdvn4",
+      "mc6l4 air 15 m4 24 1tb midnight", "mc6l4 air 15 m4 midnight",
+      "mc6l4"
+    ],
+    "air 15 m4 256 midnight": [
+      "macbook air 15 m4 256 midnight", "макбук эйр 15 м4 256 миднайт",
+      "air 15 m4 midnight 256", "mac air 15 m4 256 midnight",
+      "mw1l3 air 15 m4 16 256 midnight", "mw1l3 air 15 m4 midnight",
+      "mw1l3"
+    ],
+    "air 15 m4 256 sky blue": [
+      "macbook air 15 m4 256 sky blue", "макбук эйр 15 м4 256 скай блю",
+      "air 15 m4 sky blue 256", "mac air 15 m4 256 sky blue",
+      "mc7a4 air 15 m4 16 256 sky blue", "mc7a4 air 15 m4 sky blue",
+      "mc7a4"
+    ],
+    "air 15 m4 256 starlight": [
+      "macbook air 15 m4 256 starlight", "макбук эйр 15 м4 256 старлайт",
+      "air 15 m4 starlight 256", "mac air 15 m4 256 starlight",
+      "mw1j3 air 15 m4 16 256 starlight", "mw1j3 air 15 m4 starlight",
+      "mw1j3"
+    ],
+    "air 15 m4 512 sky blue": [
+      "macbook air 15 m4 512 sky blue", "макбук эйр 15 м4 512 скай блю",
+      "air 15 m4 sky blue 512", "mac air 15 m4 512 sky blue",
+      "mc7c4 air 15 m4 16 512 sky blue", "mc7c4 air 15 m4 sky blue",
+      "mc7c4"
+    ],
+    "air 15 m4 512 midnight": [
+      "macbook air 15 m4 512 midnight", "макбук эйр 15 м4 512 миднайт",
+      "air 15 m4 midnight 512", "mac air 15 m4 512 midnight",
+      "mw1m3 air 15 m4 16 512 midnight", "mw1m3 air 15 m4 midnight",
+      "mw1m3"
+    ],
+    "air 15 m4 24 512 starlight": [
+      "macbook air 15 m4 24 512 starlight", "макбук эйр 15 м4 24 512 старлайт",
+      "air 15 m4 24gb 512 starlight", "mac air 15 m4 24 512 starlight",
+      "mc6k4 air 15 m4 24 512 starlight", "mc6k4 air 15 m4 starlight",
+      "mc6k4"
+    ],
+    "air 15 m4 24 1tb sky blue": [
+      "macbook air 15 m4 24 1tb sky blue", "макбук эйр 15 м4 24 1тб скай блю",
+      "air 15 m4 24gb 1tb sky blue", "mac air 15 m4 24 1tb sky blue",
+      "mc7d4 air 15 m4 24 1tb sky blue", "mc7d4 air 15 m4 sky blue",
+      "mc7d4"
+    ],
+    "air 15 m4 256 starlight": [
+      "macbook air 15 m4 256 starlight", "макбук эйр 15 м4 256 старлайт",
+      "air 15 m4 starlight 256", "mac air 15 m4 256 starlight",
+      "mxd33 air 15 m4 16 256 starlight", "mxd33 air 15 m4 starlight",
+      "mxd33"
+    ],
+    "air 15 m5 16 256 starlight": [
+      "macbook air 15 m5 256 starlight", "макбук эйр 15 м5 256 старлайт",
+      "air 15 m5 starlight 256", "mac air 15 m5 256 starlight",
+      "mdvd4 air 15 m5 16 256 starlight", "mdvd4 air 15 m5 starlight",
+      "mdvd4"
+    ],
+    "air 15 m5 16 512 sky blue": [
+      "macbook air 15 m5 512 sky blue", "макбук эйр 15 м5 512 скай блю",
+      "air 15 m5 sky blue 512", "mac air 15 m5 512 sky blue",
+      "mdvq4 air 15 m5 16 512 sky blue", "mdvq4 air 15 m5 sky blue",
+      "mdvq4"
+    ],
+    "air 15 m5 24 1tb sky blue": [
+      "macbook air 15 m5 24 1tb sky blue", "макбук эйр 15 м5 24 1тб скай блю",
+      "air 15 m5 24gb 1tb sky blue", "mac air 15 m5 24 1tb sky blue",
+      "mdvu4 air 15 m5 24 1tb sky blue", "mdvu4 air 15 m5 sky blue",
+      "mdvu4"
+    ],
+    "air 13 m5 16 256 starlight": [
+      "macbook air 13 m5 256 starlight", "макбук эйр 13 м5 256 старлайт",
+      "air 13 m5 starlight 256", "mac air 13 m5 256 starlight",
+      "mdha4 air 13 m5 16 256 starlight", "mdha4 air 13 m5 starlight",
+      "mdha4"
+    ],
+    "air 13 m5 16 512 starlight": [
+      "macbook air 13 m5 512 starlight", "макбук эйр 13 м5 512 старлайт",
+      "air 13 m5 starlight 512", "mac air 13 m5 512 starlight",
+      "mdhc4 air 13 m5 16 512 starlight", "mdhc4 air 13 m5 starlight",
+      "mdhc4"
+    ],
+    "air 13 m5 16 512 midnight": [
+      "macbook air 13 m5 512 midnight", "макбук эйр 13 м5 512 миднайт",
+      "air 13 m5 midnight 512", "mac air 13 m5 512 midnight",
+      "mdhf4 air 13 m5 16 512 midnight", "mdhf4 air 13 m5 midnight",
+      "mdhf4"
+    ],
+    "air 13 m5 16 1tb silver": [
+      "macbook air 13 m5 16 1tb silver", "макбук эйр 13 м5 16 1тб сильвер",
+      "air 13 m5 1tb silver", "mac air 13 m5 16 1tb silver",
+      "mdh84 air 13 m5 16 1tb silver", "mdh84 air 13 m5 silver",
+      "mdh84"
+    ],
+    "air 13 m5 24 1tb silver": [
+      "macbook air 13 m5 24 1tb silver", "макбук эйр 13 м5 24 1тб сильвер",
+      "air 13 m5 24 silver", "mac air 13 m5 24 1tb silver",
+      "mdh94 air 13 m5 24 1tb silver", "mdh94 air 13 m5 silver",
+      "mdh94"
+    ],
+    "air 13 m5 16 1tb sky blue": [
+      "macbook air 13 m5 16 1tb sky blue", "макбук эйр 13 м5 16 1тб скай блю",
+      "air 13 m5 1tb sky blue", "mac air 13 m5 16 1tb sky blue",
+      "mdhj4 air 13 m5 16 1tb sky blue", "mdhj4 air 13 m5 sky blue",
+      "mdhj4"
+    ],
+    "air 13 m5 24 1tb sky blue": [
+      "macbook air 13 m5 24 1tb sky blue", "макбук эйр 13 м5 24 1тб скай блю",
+      "air 13 m5 24 sky blue", "mac air 13 m5 24 1tb sky blue",
+      "mdhk4 air 13 m5 24 1tb sky blue", "mdhk4 air 13 m5 sky blue",
+      "mdhk4"
+    ],
+    "macbook pro 14": [
+      "macbook pro 14 m5", "макбук про 14 м5",
+      "macbook pro 14 black", "макбук про 14 черный",
+      "mac pro 14 black", "macbook pro 14 m5 black"
+    ],
+    "pro 14 gray": [
+      "macbook pro 14 gray", "макбук про 14 серый",
+      "мак про 14 серый", "mac pro 14 gray"
+    ],
+    "pro 14 silver": [
+      "macbook pro 14 silver", "макбук про 14 серебро",
+      "mac pro 14 silver"
+    ],
+    "pro 14 space black": [
+      "macbook pro 14 space black", "макбук про 14 спейс блэк",
+      "mac pro 14 space black"
+    ],
+    "pro 16 gray": [
+      "macbook pro 16 gray", "макбук про 16 серый", "mac pro 16 gray"
+    ],
+    "pro 16 silver": [
+      "macbook pro 16 silver", "макбук про 16 серебро", "mac pro 16 silver"
+    ],
+
+    "_comment_accessories": "─── Apple Accessories ──────────────────────────────────",
+
+    "apple pencil pro": [
+      "apple pencil", "эпл пенсил про", "карандаш эпл", "pencil pro",
+      "эпл карандаш"
+    ],
+    "magic mouse black": [
+      "мышь черная", "мышь блэк", "magic mouse черный",
+      "magic mouse usb c black"
+    ],
+    "magic mouse white": [
+      "мышь белая", "magic mouse белый", "magic mouse usb c white"
+    ],
+    "apple airtag 4 pack": [
+      "airtag 4", "airtag 4 pack", "аиртег 4", "эйртег 4",
+      "apple airtag 4", "airtag 4pac", "airtag4"
+    ],
+
+    "_comment_samsung": "─── Samsung Galaxy ──────────────────────────────────────",
+
+    "galaxy a06": [
+      "а06", "самсунг а06", "галакси а06",
+      "samsung a06", "galaxy a 06"
+    ],
+    "galaxy a07": [
+      "а07", "самсунг а07", "галакси а07",
+      "samsung a07", "galaxy a 07"
+    ],
+    "galaxy a17": [
+      "а17", "самсунг а17", "галакси а17",
+      "samsung a17", "galaxy a 17"
+    ],
+    "galaxy a35": [
+      "а35", "самсунг а35", "галакси а35",
+      "samsung a35", "galaxy a 35"
+    ],
+    "galaxy a36": [
+      "а36", "самсунг а36", "галакси а36",
+      "samsung a36", "galaxy a 36"
+    ],
+    "galaxy a56": [
+      "а56", "самсунг а56", "галакси а56",
+      "samsung a56", "galaxy a 56"
+    ],
+    "galaxy s24": [
+      "с24", "самсунг с24", "самсунг s24", "галакси с24",
+      "samsung s24", "s24", "galaxy s 24"
+    ],
+    "galaxy a36 8 256 black": [
+      "самсунг а36 8/256 черный", "галакси а36 8/256 черный",
+      "а36 8/256 black", "a36 8/256 black", "a36 256 black"
+    ],
+    "galaxy a36 8 256 white": [
+      "самсунг а36 8/256 белый", "галакси а36 8/256 белый",
+      "а36 8/256 white", "a36 8/256 white", "a36 256 white"
+    ],
+    "galaxy s24 8 128 gray": [
+      "самсунг s24 128 серый", "с24 128 серый",
+      "s24 128 gray", "s24 8/128 gray"
+    ],
+    "galaxy s24 8 256 black": [
+      "самсунг s24 256 черный", "с24 256 черный",
+      "s24 256 black", "s24 8/256 black"
+    ],
+    "galaxy s24 8 256 purple": [
+      "самсунг s24 256 фиолетовый", "с24 256 фиолетовый",
+      "s24 256 violet", "s24 8/256 violet",
+      "s24 256 purple", "s24 8/256 purple"
+    ],
+
+    "_comment_s24_ultra": "─── Samsung S24 Ultra ───────────────────────────────────",
+
+    "galaxy s24 ultra": [
+      "самсунг s24 ультра", "с24 ультра", "самсунг с24 ультра",
+      "samsung s24 ultra", "s24 ultra"
+    ],
+    "galaxy s24 ultra 12 256 titanium black": [
+      "s24 ультра 256 черный", "s24 ultra 256 black",
+      "с24 ультра 256 черный", "s24 ultra 12/256 titanium black"
+    ],
+    "galaxy s24 ultra 12 256 titanium gray": [
+      "s24 ультра 256 серый", "s24 ultra 256 gray",
+      "с24 ультра 256 серый", "s24 ultra 12/256 titanium gray"
+    ],
+    "galaxy s24 ultra 12 256 titanium violet": [
+      "s24 ультра 256 фиолетовый", "s24 ultra 256 violet",
+      "с24 ультра 256 фиолетовый", "s24 ultra 12/256 titanium violet"
+    ],
+    "galaxy s24 ultra 12 512 titanium black": [
+      "s24 ультра 512 черный", "s24 ultra 512 black",
+      "с24 ультра 512 черный", "s24 ultra 12/512 titanium black"
+    ],
+    "galaxy s24 ultra 12 512 titanium gray": [
+      "s24 ультра 512 серый", "s24 ultra 512 gray",
+      "с24 ультра 512 серый", "s24 ultra 12/512 titanium gray"
+    ],
+
+    "_comment_s25_fe": "─── Samsung S25 FE ──────────────────────────────────────",
+
+    "galaxy s25 fe": [
+      "самсунг s25 фе", "с25 фе", "самсунг с25 фе",
+      "samsung s25 fe", "s25 fe"
+    ],
+    "galaxy s25 fe 8 512 jet black": [
+      "s25 fe 512 черный", "s25 fe 512 black", "s25 fe jet black",
+      "с25 фе 512 черный", "s25 fe 512 jetblack"
+    ],
+    "galaxy s25 fe 8 512 white": [
+      "s25 fe 512 белый", "s25 fe 512 white", "с25 фе 512 белый"
+    ],
+    "galaxy s25 fe 8 512 navy": [
+      "s25 fe 512 неви", "s25 fe 512 navy", "с25 фе 512 неви"
+    ],
+    "galaxy s25 fe 8 512 ice blue": [
+      "s25 fe 512 айс блю", "s25 fe 512 ice blue",
+      "s25 fe 512 iceblue", "с25 фе 512 голубой"
+    ],
+
+    "_comment_s25": "─── Samsung S25 ─────────────────────────────────────────",
+
+    "galaxy s25": [
+      "самсунг s25", "с25", "самсунг с25",
+      "samsung s25", "s25"
+    ],
+    "galaxy s25 128 navy": [
+      "s25 128 неви", "s25 128 navy", "samsung s25 128 navy",
+      "s25/128 navy", "galaxy s25/128 navy"
+    ],
+    "galaxy s25 12 256 navy": [
+      "s25 256 неви", "s25 256 navy", "s25 темно-синий",
+      "с25 256 неви", "s25 12/256 navy"
+    ],
+    "galaxy s25 12 256 silver shadow": [
+      "s25 256 сильвер шэдоу", "s25 256 silver shadow",
+      "с25 256 серебристый", "s25 12/256 silver shadow",
+      "s25 silvershadow"
+    ],
+    "galaxy s25 12 256 mint": [
+      "s25 256 минт", "s25 256 mint", "s25 мятный",
+      "с25 256 минт", "s25 12/256 mint"
+    ],
+    "galaxy s25 12 256 ice blue": [
+      "s25 256 айс блю", "s25 256 ice blue", "s25 256 icyblue",
+      "с25 256 голубой", "s25 12/256 icyblue"
+    ],
+
+    "_comment_s25_plus": "─── Samsung S25+ ────────────────────────────────────────",
+
+    "galaxy s25 plus": [
+      "самсунг s25+", "с25 плюс", "samsung s25 plus",
+      "s25+", "s25 plus", "galaxy s25+"
+    ],
+    "galaxy s25 plus 12 256 navy": [
+      "s25+ 256 неви", "s25+ 256 navy", "s25 plus 256 navy",
+      "с25+ 256 неви", "s25plus 256 navy"
+    ],
+    "galaxy s25 plus 12 256 silver": [
+      "s25+ 256 silver", "s25 plus 256 silver", "s25+ 256 сильвер",
+      "с25+ 256 серебро", "s25plus 256 silver"
+    ],
+
+    "_comment_s25_ultra": "─── Samsung S25 Ultra ───────────────────────────────────",
+
+    "galaxy s25 ultra": [
+      "самсунг s25 ультра", "с25 ультра", "самсунг с25 ультра",
+      "samsung s25 ultra", "s25 ultra"
+    ],
+    "galaxy s25 ultra 12 256 jet black": [
+      "s25 ультра 256 черный", "s25 ultra 256 black",
+      "с25 ультра 256 черный", "s25 ultra 256 jetblack"
+    ],
+    "galaxy s25 ultra 12 256 white silver": [
+      "s25 ультра 256 уайт сильвер", "s25 ultra 256 white silver",
+      "с25 ультра 256 белое серебро", "s25 ultra 256 whitesilver"
+    ],
+    "galaxy s25 ultra 12 256 gray": [
+      "s25 ультра 256 серый", "s25 ultra 256 gray",
+      "с25 ультра 256 серый"
+    ],
+    "galaxy s25 ultra 12 256 silver blue": [
+      "s25 ультра 256 сильвер блю", "s25 ultra 256 silver blue",
+      "с25 ультра 256 серебристо-синий"
+    ],
+    "galaxy s25 ultra 12 512 white silver": [
+      "s25 ультра 512 уайт сильвер", "s25 ultra 512 white silver",
+      "с25 ультра 512 белое серебро", "s25 ultra 512 whitesilver"
+    ],
+    "galaxy s25 ultra 12 512 gray": [
+      "s25 ультра 512 серый", "s25 ultra 512 gray",
+      "с25 ультра 512 серый", "s25 ultra 512 grey"
+    ],
+    "galaxy s25 ultra 12 512 silver blue": [
+      "s25 ультра 512 сильвер блю", "s25 ultra 512 silver blue",
+      "с25 ультра 512 серебристо-синий"
+    ],
+    "galaxy s25 ultra 12 1tb black": [
+      "s25 ультра 1тб черный", "s25 ultra 1tb black",
+      "с25 ультра 1тб черный"
+    ],
+    "galaxy s25 ultra 12 1tb gray": [
+      "s25 ультра 1тб серый", "s25 ultra 1tb gray",
+      "с25 ультра 1тб серый"
+    ],
+
+    "_comment_z_flip": "─── Samsung Z Flip 6 / 7 ────────────────────────────────",
+
+    "galaxy z flip6": [
+      "зет флип 6", "самсунг зет флип 6",
+      "z flip 6", "samsung z flip 6", "galaxy z flip 6"
+    ],
+    "galaxy z flip 6 12 512 silver shadow": [
+      "z flip 6 512 сильвер шэдоу", "z flip 6 512 silver shadow",
+      "зет флип 6 512 серебро", "z flip6 512 silver shadow"
+    ],
+    "galaxy z flip7": [
+      "зет флип 7", "самсунг зет флип 7",
+      "z flip 7", "samsung z flip 7", "galaxy z flip 7"
+    ],
+    "galaxy z flip 7 12 256 jet black": [
+      "z flip 7 256 черный", "z flip 7 256 jet black",
+      "зет флип 7 256 черный", "z flip7 256 jetblack"
+    ],
+
+    "_comment_z_fold": "─── Samsung Z Fold 7 ────────────────────────────────────",
+
+    "galaxy z fold7": [
+      "зет фолд 7", "самсунг зет фолд 7",
+      "z fold 7", "samsung z fold 7", "galaxy z fold 7"
+    ],
+    "galaxy z fold 7 12 256 silver shadow": [
+      "z fold 7 256 сильвер шэдоу", "z fold 7 256 silver shadow",
+      "зет фолд 7 256 сильвер шэдоу", "z fold7 256 silver shadow"
+    ],
+    "galaxy z fold 7 12 256 blue shadow": [
+      "z fold 7 256 блю шэдоу", "z fold 7 256 blue shadow",
+      "зет фолд 7 256 блю шэдоу", "z fold7 256 blue shadow"
+    ],
+    "galaxy z fold 7 12 256 blue": [
+      "z fold 7 256 blue", "z fold 7 12 256 blue",
+      "зет фолд 7 256 голубой"
+    ],
+    "galaxy z fold 7 12 256 silver": [
+      "z fold 7 256 silver", "z fold 7 12 256 silver",
+      "зет фолд 7 256 серебро"
+    ],
+    "galaxy z fold 7 12 256 jet black": [
+      "z fold 7 256 черный", "z fold 7 256 jet black",
+      "z fold 7 12 256 jet black", "зет фолд 7 256 черный",
+      "z fold7 256 jetblack"
+    ],
+    "galaxy z fold 7 12 512 jet black": [
+      "z fold 7 512 черный", "z fold 7 512 jet black",
+      "зет фолд 7 512 черный", "z fold7 512 jetblack"
+    ],
+    "galaxy z fold 7 12 512 blue": [
+      "z fold 7 512 синий", "z fold 7 512 blue",
+      "зет фолд 7 512 синий"
+    ],
+    "galaxy z fold 7 12 512 silver": [
+      "z fold 7 512 серебро", "z fold 7 512 silver",
+      "зет фолд 7 512 серебро"
+    ],
+    "galaxy z fold 7 12 512 mint": [
+      "z fold 7 512 минт", "z fold 7 512 mint",
+      "зет фолд 7 512 мятный"
+    ],
+
+    "_comment_xiaomi": "─── Xiaomi / Redmi / Poco ─────────────────────────────",
+
+    "air 13 m4 16 256 silver in": [
+      "mw0w3 air 13 m4 16 256 silver in",
+      "mw0w3 air 13 m4 16 256 silver",
+      "macbook air 13 m4 16 256 silver in",
+      "air 13 m4 16 256 silver in",
+      "mw0w3"
+    ],
+    "pro 14 m5 16 1tb black in": [
+      "mde14 pro 14 m5 16 1tb black in",
+      "mde14 pro 14 m5 16 1tb black",
+      "macbook pro 14 m5 16 1tb black in",
+      "pro 14 m5 16 1tb black in",
+      "mde14"
+    ],
+
+    "redmi 15 8 256 black евро": [
+      "redmi 15 8/256 black евро",
+      "redmi 15 8 256 black euro",
+      "redmi 15 256 black"
+    ],
+    "redmi 15 8 256 purple евро": [
+      "redmi 15 8/256 purple евро",
+      "redmi 15 8 256 purple euro",
+      "redmi 15 256 purple"
+    ],
+
+    "note 15 8 256 green евро": [
+      "note 15 8/256 green евро",
+      "note 15 8 256 gren евро",
+      "note 15 8 256 green euro",
+      "note 15 256 green"
+    ],
+    "note 15 8 256 black евро": [
+      "note 15 8/256 black евро",
+      "note 15 8 256 black euro",
+      "note 15 256 black"
+    ],
+    "note 15 8 256 purple евро": [
+      "note 15 8/256 purple евро",
+      "note 15 8 256 purple euro",
+      "note 15 256 purple"
+    ],
+    "note 15 8 256 blue евро": [
+      "note 15 8/256 blue евро",
+      "note 15 8 256 blue euro",
+      "note 15 256 blue"
+    ],
+    "note 15 pro 8 256 titanium евро": [
+      "note 15 pro 8/256 titanium евро",
+      "note 15 pro 8 256 titanium euro",
+      "note 15 pro 256 titanium"
+    ],
+    "note 15 pro 12 512 titanium евро": [
+      "note 15 pro 12/512 titanium евро",
+      "note 15 pro 12 512 titanium euro",
+      "note 15 pro 512 titanium"
+    ],
+
+    "poco m7 6 128 black евро": [
+      "poco m7 6/128 black евро",
+      "poco m7 6 128 black euro",
+      "poco m7 128 black"
+    ],
+    "poco m7 6 128 blue евро": [
+      "poco m7 6/128 blue евро",
+      "poco m7 6 128 blue euro",
+      "poco m7 128 blue"
+    ],
+    "poco m7 6 128 silver евро": [
+      "poco m7 6/128 silver евро",
+      "poco m7 6 128 silver euro",
+      "poco m7 128 silver"
+    ],
+    "poco m7 8 256 silver евро": [
+      "poco m7 8/256 silver евро",
+      "poco m7 8 256 silver euro",
+      "poco m7 256 silver"
+    ]
+  }
+}
