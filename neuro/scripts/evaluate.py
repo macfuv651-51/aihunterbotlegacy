@@ -39,39 +39,86 @@ def main():
 
     print("\n[2/3] Запуск тестовых запросов...")
 
+    # Real queries matching actual catalog products
     test_queries = [
-        "айфон 13 128 черный",
-        "iphone 13 128gb black",
-        "iphon 13 blak 128",
-        "13 айф 128 чёрный",
-        "айпад аир 11",
-        "ipad air 11",
-        "макбук про 14",
-        "macbook pro 14",
-        "эпл вотч ультра 2",
-        "apple watch ultra 2",
-        "самсунг с24 256 чёрный",
-        "samsung s24 256 black",
-        "аирподс про 2",
-        "airpods pro 2",
+        # ── iPhone ──
+        "17 про макс 256 силвер есим",
+        "17 pro max 1tb blue esim",
+        "17 аир 256 блэк",
+        "17e 256 white esim",
+        "16 про макс 256 блэк",
+        "16 128 black",
+        "15 128 миднайт",
+        "15 pro 128 blue",
+        "14 128 midnight",
+        "13 128 midnight",
+        # ── iPad ──
+        "айпад 11 128 блю вайфай",
+        "ipad 11 a16 256 wifi pink",
+        "айпад эир 11 м4 256",
+        "ipad air 13 m4 512 lte",
+        "ipad mini 7 512",
+        "ipad pro 11 m4 256 silver",
+        # ── Apple Watch ──
+        "ультра 3 блэк оушен бэнд",
+        "ul 2 black black",
+        "s11 46 jet black",
+        "se3 40 midnight",
+        "s10 42 джет блэк",
+        # ── MacBook ──
+        "air 13 m4 16 256 midnight",
+        "аир 15 м4 16 512 скай блю",
+        "air 13 m5 24 1tb silver",
+        "neo 13 silver",
+        "pro 14 gray",
+        # ── AirPods ──
+        "аирподс 4",
+        "airpods pro 2 type c",
+        "airpods max usb c blue",
+        "airpods pro 3",
+        # ── Samsung ──
+        "galaxy s26 ultra 16 1tb black",
+        "самсунг с25 ультра 12 512",
+        "galaxy a36 5g 8 128 lime",
+        "galaxy buds 4 pro black",
+        "galaxy z fold7 12 256",
+        # ── Xiaomi ──
+        "сяоми 15 12 256 блэк",
+        "note 15 pro 8 256 black",
+        "poco x8 pro 8 256 black",
+        "poco m7 6 128 black",
+        "redmi pad 2 6 128 gray",
+        # ── Dyson ──
+        "дайсон hd17 суперсоник r джаспер плам с кейсом",
+        "dyson v16 ds60 piston animal",
+        "dyson hs05 long nickel copper",
+        "dyson hs08 amber silk airwrap",
+        # ── Other ──
+        "jbl flip 7 black",
+        "sony wh ch720n black",
+        "nintendo switch oled 64 white",
+        "мэджик маус юсб с блэк",
+        "pixel 10 5g 256 frost",
+        "oneplus 15 16 512 ultra violet",
+        "ps5 pro digital 2tb",
     ]
 
-    print(f"\n{'Запрос':<35} {'Результат':<40} {'Score':>6}")
-    print("-" * 85)
+    print(f"\n{'Запрос':<42} {'Результат':<45} {'Score':>6}")
+    print("-" * 100)
 
     for query in test_queries:
         results = matcher.match(query, top_k=1)
         if results:
             top = results[0]
             confidence = matcher.is_confident(results)
-            icon = {"auto": "✅", "review": "⚠️", "reject": "❌"}[confidence]
+            icon = {"auto": "V", "review": "?", "reject": "X"}[confidence]
             print(
-                f"{query:<35} "
-                f"{top.product.get('name', '?'):<40} "
+                f"{query:<42} "
+                f"{top.product.get('name', '?'):<45} "
                 f"{top.score:>5.3f} {icon}"
             )
         else:
-            print(f"{query:<35} {'НЕ НАЙДЕНО':<40} {'':>6} ❌")
+            print(f"{query:<42} {'NOT FOUND':<45} {'':>6} X")
 
     print("\n[3/3] Вычисление метрик...")
     products = load_products(config.PRODUCTS_FILE)

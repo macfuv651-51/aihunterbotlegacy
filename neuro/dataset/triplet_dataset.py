@@ -1,7 +1,13 @@
 """
 neuro/dataset/triplet_dataset.py
 ---------------------------------
-PyTorch Dataset/DataLoader для обучения на Triplet Loss.
+PyTorch Dataset/DataLoader for Triplet Loss training.
+
+Two modes:
+  1. TripletDataset — pre-tokenised triplets (small catalogs, ≤100K triplets).
+  2. OnlineTripletDataset — samples triplets on-the-fly from
+     pre-tokenized variants per product  (large catalogs, millions of triplets,
+     fits in ~300 MB RAM instead of 4+ GB).
 """
 
 import random
@@ -12,13 +18,11 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+#  OFFLINE — pre-tokenised triplets (legacy, small datasets)
+# ═══════════════════════════════════════════════════════════════════════════════
+
 class TripletDataset(Dataset):
-    """
-    PyTorch Dataset для троек (anchor, positive, negative).
-
-    Все тексты предварительно токенизируются и хранятся как numpy-массивы.
-    """
-
     def __init__(self, anchor_ids, positive_ids, negative_ids):
         self.anchor_ids = anchor_ids
         self.positive_ids = positive_ids
@@ -42,19 +46,15 @@ def create_triplet_dataloader(
     shuffle: bool = True,
     num_workers: int = 0,
 ) -> DataLoader:
-    """
-    Создать PyTorch DataLoader из списка троек.
-    """
-    anchors = [t[0] for t in triplets]
+    anchors   = [t[0] for t in triplets]
     positives = [t[1] for t in triplets]
     negatives = [t[2] for t in triplets]
 
-    anchor_ids = tokenizer.encode_batch(anchors)
+    anchor_ids   = tokenizer.encode_batch(anchors)
     positive_ids = tokenizer.encode_batch(positives)
     negative_ids = tokenizer.encode_batch(negatives)
 
     dataset = TripletDataset(anchor_ids, positive_ids, negative_ids)
-
     return DataLoader(
         dataset,
         batch_size=batch_size,
@@ -65,44 +65,62 @@ def create_triplet_dataloader(
     )
 
 
-def mine_hard_negatives(
-    product_variants: Dict[int, List[str]],
-    encoder,
-    tokenizer,
-    negatives_per_anchor: int = 5,
-) -> List[Tuple[str, str, str]]:
+# ═══════════════════════════════════════════════════════════════════════════════
+#  ONLINE — sample triplets on-the-fly  (large catalogs, 2-3 M+ per epoch)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class OnlineTripletDataset(Dataset):
     """
-    Найти «трудные» негативные примеры с помощью модели.
+    Memory-efficient triplet sampler.
+
+    Stores pre-tokenised *variants* per product (~300 MB for 3 M variants)
+    instead of all triplets (~4+ GB).  Each __getitem__ call samples a
+    fresh random (anchor, positive, negative) triple, so every epoch
+    sees completely new combinations.
     """
-    all_texts = []
-    all_labels = []
-    for label, variants in product_variants.items():
-        for v in variants:
-            all_texts.append(v)
-            all_labels.append(label)
 
-    all_vectors = encoder.encode_texts(all_texts, tokenizer)
-    all_labels = np.array(all_labels)
+    def __init__(
+        self,
+        tokenized_variants: Dict[int, np.ndarray],
+        dataset_size: int,
+    ):
+        self.tokenized_variants = tokenized_variants
+        self.product_indices = list(tokenized_variants.keys())
+        self.dataset_size = dataset_size
+        self._n = len(self.product_indices)
 
-    triplets = []
-    for i in range(len(all_texts)):
-        anchor_label = all_labels[i]
-        similarities = np.dot(all_vectors, all_vectors[i])
+    def __len__(self):
+        return self.dataset_size
 
-        different_mask = all_labels != anchor_label
-        same_mask = (all_labels == anchor_label) & (np.arange(len(all_texts)) != i)
+    def __getitem__(self, idx):
+        # deterministic product for this idx, random pair within it
+        prod_pos = idx % self._n
+        prod_idx = self.product_indices[prod_pos]
+        variants = self.tokenized_variants[prod_idx]
+        n_var = len(variants)
 
-        if not np.any(same_mask) or not np.any(different_mask):
-            continue
+        # anchor & positive — two different variants of the SAME product
+        i = random.randint(0, n_var - 1)
+        j = random.randint(0, n_var - 2)
+        if j >= i:
+            j += 1
 
-        pos_idx = np.random.choice(np.where(same_mask)[0])
+        anchor   = torch.tensor(variants[i], dtype=torch.long)
+        positive = torch.tensor(variants[j], dtype=torch.long)
 
-        neg_similarities = similarities.copy()
-        neg_similarities[~different_mask] = -2.0
-        hard_neg_indices = np.argsort(neg_similarities)[::-1][:negatives_per_anchor]
+        # negative — a variant of a DIFFERENT product
+        neg_pos = random.randint(0, self._n - 2)
+        if neg_pos >= prod_pos:
+            neg_pos += 1
+        neg_variants = self.tokenized_variants[self.product_indices[neg_pos]]
+        k = random.randint(0, len(neg_variants) - 1)
+        negative = torch.tensor(neg_variants[k], dtype=torch.long)
 
-        for neg_idx in hard_neg_indices:
-            triplets.append((all_texts[i], all_texts[pos_idx], all_texts[neg_idx]))
+        return anchor, positive, negative
 
-    random.shuffle(triplets)
-    return triplets
+
+def _worker_init_fn(worker_id):
+    """Ensure each DataLoader worker gets a unique random seed."""
+    seed = torch.initial_seed() % (2**32) + worker_id
+    random.seed(seed)
+    np.random.seed(seed % (2**32))

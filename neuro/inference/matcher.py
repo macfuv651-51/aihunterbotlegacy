@@ -42,9 +42,10 @@ class ProductMatcher:
         self.device = torch.device(device)
 
     def match(self, query: str, top_k: int = 5) -> List[MatchResult]:
-        token_ids = self.tokenizer.encode(query)
+        encoded = self.tokenizer.encode(query)
         token_ids = torch.tensor(
-            [token_ids], dtype=torch.long, device=self.device
+            encoded.reshape(1, -1),
+            dtype=torch.long, device=self.device
         )
         with torch.no_grad():
             query_vector = self.encoder(token_ids).cpu().numpy()[0]

@@ -57,9 +57,14 @@ class Trainer:
         val_data: Optional[Tuple] = None,
         epochs: int = 100,
         tokenizer=None,
+        patience: int = 0,
     ) -> List[Dict]:
         """
         Полный цикл обучения.
+
+        Args:
+            patience: Early stopping — прекратить обучение если R@1
+                      не улучшается N эпох подряд. 0 = отключено.
         """
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
@@ -67,6 +72,7 @@ class Trainer:
         )
 
         os.makedirs(self.checkpoint_dir, exist_ok=True)
+        no_improve = 0
 
         for epoch in range(1, epochs + 1):
             epoch_start = time.time()
@@ -113,9 +119,18 @@ class Trainer:
                     self.best_recall = val_metrics["recall@1"]
                     self.model.save_all(self.checkpoint_dir)
                     metrics["saved"] = True
+                    no_improve = 0
+                else:
+                    no_improve += 1
 
             self.history.append(metrics)
             self._log_epoch(metrics)
+
+            # Early stopping
+            if patience > 0 and no_improve >= patience:
+                print(f"\n  Early stopping: R@1 не улучшался {patience} эпох.",
+                      flush=True)
+                break
 
         return self.history
 

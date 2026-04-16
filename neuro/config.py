@@ -21,8 +21,8 @@ WEIGHTS_DIR = os.path.join(BASE_DIR, "weights")
 # Директория для FAISS индекса (создаётся после build_index)
 INDEX_DIR = os.path.join(BASE_DIR, "index")
 
-# Путь к каталогу товаров (products.json из hunter)
-PRODUCTS_FILE = os.path.join(BASE_DIR, "..", "hunter", "data", "products.json")
+# Путь к каталогу товаров (полный каталог 617 позиций)
+PRODUCTS_FILE = os.path.join(BASE_DIR, "data", "products_full.json")
 
 # Директория для обучающих данных (реальные сообщения из чатов)
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -69,19 +69,22 @@ MIN_LEARNING_RATE = 1e-5
 # Размер батча
 BATCH_SIZE = 256
 
-# Количество эпох
-EPOCHS = 100
+# Количество эпох (макс., ранняя остановка по patience)
+EPOCHS = 30
 
 # Margin для Triplet Loss (минимальный запас между positive и negative)
 TRIPLET_MARGIN = 0.3
 
 # Количество синтетических вариантов на каждый товар при аугментации
-# 53 товара × 200 = 10,600 вариантов
-AUGMENT_PER_PRODUCT = 500
+# 617 товаров × 5000 = ~3 М вариантов
+AUGMENT_PER_PRODUCT = 5000
 
-# Количество троек (anchor, positive, negative) на каждый товар
-# 53 товара × 150 = 7,950 троек для обучения
-TRIPLETS_PER_PRODUCT = 500
+# Размер датасета триплетов за 1 эпоху (online generation)
+# 617 товаров × ~1600 триплетов/товар = ~1 М за эпоху
+DATASET_SIZE = 1_000_000
+
+# Ранняя остановка: прекратить обучение если R@1 не улучшается
+EARLY_STOPPING_PATIENCE = 5
 
 
 # ─── Инференс ─────────────────────────────────────────────────────────────────

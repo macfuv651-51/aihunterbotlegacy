@@ -1,7 +1,14 @@
 """
-neuro/scripts/train.py
-----------------------
-Точка входа для обучения нейросети матчинга товаров (PyTorch).
+neuro/scripts/train.py  (v2 — online triplet generation)
+---------------------------------------------------------
+Обучение нейросети матчинга товаров на PyTorch.
+
+Пайплайн:
+  1. Загрузка 617 товаров из products_full.json
+  2. Генерация 5 000 вариантов × 617 = ~3 М строк
+  3. Токенизация всех вариантов → numpy-массивы (~300 МБ)
+  4. OnlineTripletDataset сэмплирует триплеты на лету
+  5. Обучение 30 эпох с ранней остановкой
 
 Запуск:  python -m neuro.scripts.train
 """
@@ -19,18 +26,29 @@ _project_root = os.path.dirname(
 if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
+from torch.utils.data import DataLoader
+
 from neuro import config
-from neuro.augment.generator import generate_triplets, generate_variants
+from neuro.augment.generator import generate_variants
 from neuro.dataset.loader import extract_product_names, load_products
-from neuro.dataset.triplet_dataset import create_triplet_dataloader
+from neuro.dataset.triplet_dataset import OnlineTripletDataset, _worker_init_fn
 from neuro.model.encoder import ProductEncoder
 from neuro.tokenizer.char_tokenizer import CharTokenizer
 from neuro.training.trainer import Trainer
 
 
+# Fixed vocabulary: all characters the model will ever see
+_VOCAB_CHARS = (
+    "abcdefghijklmnopqrstuvwxyz"
+    "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+    "0123456789"
+    " _"
+)
+
+
 def main():
     print("=" * 60)
-    print("  ОБУЧЕНИЕ НЕЙРОСЕТИ МАТЧИНГА ТОВАРОВ (PyTorch)")
+    print("  ОБУЧЕНИЕ НЕЙРОСЕТИ МАТЧИНГА ТОВАРОВ v2 (PyTorch)")
     print("=" * 60)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -38,53 +56,59 @@ def main():
     if device == "cuda":
         print(f"  GPU: {torch.cuda.get_device_name(0)}")
 
-    # ─── 1. Загрузка каталога ─────────────────────────────────────────────
-    print("\n[1/7] Загрузка каталога товаров...")
+    # ─── 1. Load products ────────────────────────────────────────────────
+    print("\n[1/8] Загрузка каталога товаров...")
     products = load_products(config.PRODUCTS_FILE)
     product_names = extract_product_names(products)
     print(f"  Загружено {len(products)} товаров.")
 
-    # ─── 2. Генерация синтетических данных ────────────────────────────────
-    print("\n[2/7] Генерация синтетических данных...")
-    start = time.time()
-    triplets = generate_triplets(
-        products,
-        variants_per_product=config.AUGMENT_PER_PRODUCT,
-        triplets_per_product=config.TRIPLETS_PER_PRODUCT,
-    )
-    elapsed = time.time() - start
-    print(f"  Сгенерировано {len(triplets)} троек за {elapsed:.1f}s.")
+    # ─── 2. Tokenizer (fixed vocab, instant) ─────────────────────────────
+    print("\n[2/8] Создание токенайзера...")
+    tokenizer = CharTokenizer(max_len=config.MAX_SEQ_LEN)
+    tokenizer.fit([_VOCAB_CHARS])
+    print(f"  Словарь: {tokenizer.vocab_size} символов.")
 
-    # ─── 3. Подготовка валидационных данных ────────────────────────────────
-    print("\n[3/7] Подготовка валидационных данных...")
+    # ─── 3. Generate & tokenize variants ─────────────────────────────────
+    print(f"\n[3/8] Генерация {config.AUGMENT_PER_PRODUCT} вариантов × "
+          f"{len(product_names)} товаров...")
+    gen_start = time.time()
+
+    tokenized_variants = {}
+    total_variants = 0
+
+    for idx, name in enumerate(product_names):
+        variants = generate_variants(name, count=config.AUGMENT_PER_PRODUCT)
+        tokenized_variants[idx] = tokenizer.encode_batch(variants)
+        total_variants += len(variants)
+
+        if (idx + 1) % 100 == 0 or idx + 1 == len(product_names):
+            elapsed = time.time() - gen_start
+            print(f"  [{idx+1}/{len(product_names)}] "
+                  f"{total_variants:,} вариантов за {elapsed:.1f}s",
+                  flush=True)
+
+    # Memory estimate
+    mem_bytes = sum(v.nbytes for v in tokenized_variants.values())
+    mem_mb = mem_bytes / 1024 / 1024
+    print(f"  Итого: {total_variants:,} вариантов, {mem_mb:.0f} MB RAM")
+
+    # ─── 4. Validation data ──────────────────────────────────────────────
+    print("\n[4/8] Подготовка валидационных данных...")
     val_texts, val_labels = [], []
     index_texts, index_labels = [], []
 
     for idx, name in enumerate(product_names):
         index_texts.append(name)
         index_labels.append(idx)
-        variants = generate_variants(name, count=4)
-        for v in variants[1:]:
+        for v in generate_variants(name, count=4)[1:]:
             val_texts.append(v)
             val_labels.append(idx)
 
-    print(f"  Валидация: {len(val_texts)} запросов → {len(index_texts)} товаров.")
+    print(f"  Валидация: {len(val_texts)} запросов → "
+          f"{len(index_texts)} товаров.")
 
-    # ─── 4. Создание токенайзера ──────────────────────────────────────────
-    print("\n[4/7] Создание токенайзера...")
-    all_texts = (
-        [t[0] for t in triplets]
-        + [t[1] for t in triplets]
-        + [t[2] for t in triplets]
-        + val_texts
-        + index_texts
-    )
-    tokenizer = CharTokenizer(max_len=config.MAX_SEQ_LEN)
-    tokenizer.fit(all_texts)
-    print(f"  Словарь: {tokenizer.vocab_size} символов.")
-
-    # ─── 5. Создание модели ───────────────────────────────────────────────
-    print("\n[5/7] Создание модели...")
+    # ─── 5. Model ────────────────────────────────────────────────────────
+    print("\n[5/8] Создание модели...")
     model = ProductEncoder(
         vocab_size=tokenizer.vocab_size,
         embed_dim=config.EMBED_DIM,
@@ -95,21 +119,32 @@ def main():
         max_seq_len=config.MAX_SEQ_LEN,
         dropout=config.DROPOUT_RATE,
     )
-
     total_params = sum(p.numel() for p in model.parameters())
     size_mb = total_params * 4 / 1024 / 1024
     print(f"  Параметров: {total_params:,} ({size_mb:.1f} MB)")
 
-    # ─── 6. Подготовка батчей ─────────────────────────────────────────────
-    print("\n[6/7] Подготовка батчей...")
-    train_loader = create_triplet_dataloader(
-        triplets, tokenizer, batch_size=config.BATCH_SIZE,
+    # ─── 6. Online dataset + DataLoader ──────────────────────────────────
+    print(f"\n[6/8] Подготовка DataLoader "
+          f"(dataset_size={config.DATASET_SIZE:,})...")
+    dataset = OnlineTripletDataset(tokenized_variants, config.DATASET_SIZE)
+    train_loader = DataLoader(
+        dataset,
+        batch_size=config.BATCH_SIZE,
+        shuffle=True,
+        num_workers=2,
+        drop_last=True,
+        pin_memory=(device == "cuda"),
+        worker_init_fn=_worker_init_fn,
+        persistent_workers=True,
     )
-    val_data = (val_texts, val_labels, index_texts, index_labels)
     print(f"  Батчей: {len(train_loader)}")
 
-    # ─── 7. Обучение ──────────────────────────────────────────────────────
-    print("\n[7/7] Обучение...")
+    # ─── 7. Validation tuple ─────────────────────────────────────────────
+    val_data = (val_texts, val_labels, index_texts, index_labels)
+
+    # ─── 8. Training ─────────────────────────────────────────────────────
+    print(f"\n[7/8] Обучение (до {config.EPOCHS} эпох, "
+          f"patience={config.EARLY_STOPPING_PATIENCE})...")
     print("-" * 60)
 
     trainer = Trainer(
@@ -126,8 +161,10 @@ def main():
         val_data=val_data,
         epochs=config.EPOCHS,
         tokenizer=tokenizer,
+        patience=config.EARLY_STOPPING_PATIENCE,
     )
 
+    # ─── Save tokenizer ─────────────────────────────────────────────────
     tokenizer_path = os.path.join(config.WEIGHTS_DIR, "tokenizer.json")
     tokenizer.save(tokenizer_path)
 
