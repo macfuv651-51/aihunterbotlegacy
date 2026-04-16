@@ -10,7 +10,8 @@ __pycache__/
 venv/
 env/
 
-# TensorFlow / ML weights (большие бинарные файлы)
+# PyTorch / ML weights (большие бинарные файлы)
+neuro/weights/*.pt
 neuro/weights/*.h5
 neuro/weights/*.keras
 neuro/index/
