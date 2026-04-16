@@ -131,11 +131,9 @@ def main():
         dataset,
         batch_size=config.BATCH_SIZE,
         shuffle=True,
-        num_workers=2,
+        num_workers=0,
         drop_last=True,
         pin_memory=(device == "cuda"),
-        worker_init_fn=_worker_init_fn,
-        persistent_workers=True,
     )
     print(f"  Батчей: {len(train_loader)}")
 

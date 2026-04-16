@@ -67,7 +67,7 @@ LEARNING_RATE = 3e-4
 MIN_LEARNING_RATE = 1e-5
 
 # Размер батча
-BATCH_SIZE = 256
+BATCH_SIZE = 192
 
 # Количество эпох (макс., ранняя остановка по patience)
 EPOCHS = 30
