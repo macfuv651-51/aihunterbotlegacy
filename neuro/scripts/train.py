@@ -160,6 +160,7 @@ def main():
         epochs=config.EPOCHS,
         tokenizer=tokenizer,
         patience=config.EARLY_STOPPING_PATIENCE,
+        grad_accum_steps=config.GRAD_ACCUM_STEPS,
     )
 
     # ─── Save tokenizer ─────────────────────────────────────────────────

@@ -58,6 +58,7 @@ class Trainer:
         epochs: int = 100,
         tokenizer=None,
         patience: int = 0,
+        grad_accum_steps: int = 1,
     ) -> List[Dict]:
         """
         Полный цикл обучения.
@@ -65,6 +66,7 @@ class Trainer:
         Args:
             patience: Early stopping — прекратить обучение если R@1
                       не улучшается N эпох подряд. 0 = отключено.
+            grad_accum_steps: Gradient accumulation steps.
         """
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
@@ -78,13 +80,12 @@ class Trainer:
             epoch_start = time.time()
             self.model.train()
             epoch_losses = []
+            optimizer.zero_grad()
 
-            for anchor_ids, positive_ids, negative_ids in train_loader:
+            for step, (anchor_ids, positive_ids, negative_ids) in enumerate(train_loader, 1):
                 anchor_ids = anchor_ids.to(self.device)
                 positive_ids = positive_ids.to(self.device)
                 negative_ids = negative_ids.to(self.device)
-
-                optimizer.zero_grad()
 
                 anchor_emb = self.model(anchor_ids)
                 positive_emb = self.model(positive_ids)
@@ -92,11 +93,15 @@ class Trainer:
 
                 loss = triplet_loss(
                     anchor_emb, positive_emb, negative_emb, self.margin
-                )
+                ) / grad_accum_steps
 
                 loss.backward()
-                optimizer.step()
-                epoch_losses.append(loss.item())
+
+                if step % grad_accum_steps == 0:
+                    optimizer.step()
+                    optimizer.zero_grad()
+
+                epoch_losses.append(loss.item() * grad_accum_steps)
 
             scheduler.step()
 
