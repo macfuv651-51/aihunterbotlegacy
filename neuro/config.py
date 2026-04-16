@@ -73,7 +73,7 @@ BATCH_SIZE = 96
 VAL_EVERY_N_EPOCHS = 3
 
 # Количество эпох (макс., ранняя остановка по patience)
-EPOCHS = 30
+EPOCHS = 50
 
 # Margin для Triplet Loss (минимальный запас между positive и negative)
 TRIPLET_MARGIN = 0.3
@@ -83,8 +83,8 @@ TRIPLET_MARGIN = 0.3
 AUGMENT_PER_PRODUCT = 5000
 
 # Размер датасета триплетов за 1 эпоху (online generation)
-# 617 товаров × ~1600 триплетов/товар = ~1 М за эпоху
-DATASET_SIZE = 1_000_000
+# 617 × ~160 триплетов = 100K/эпоху, ~4 мин/эпоха
+DATASET_SIZE = 100_000
 
 # Ранняя остановка: прекратить обучение если R@1 не улучшается
 EARLY_STOPPING_PATIENCE = 5
