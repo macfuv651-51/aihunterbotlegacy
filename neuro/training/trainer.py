@@ -58,7 +58,7 @@ class Trainer:
         epochs: int = 100,
         tokenizer=None,
         patience: int = 0,
-        grad_accum_steps: int = 1,
+        val_every: int = 1,
     ) -> List[Dict]:
         """
         Полный цикл обучения.
@@ -66,12 +66,15 @@ class Trainer:
         Args:
             patience: Early stopping — прекратить обучение если R@1
                       не улучшается N эпох подряд. 0 = отключено.
-            grad_accum_steps: Gradient accumulation steps.
+            val_every: Валидация каждые N эпох (экономит время).
         """
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
             optimizer, T_max=epochs, eta_min=self.min_lr
         )
+
+        # cudnn benchmark для фиксированных тензоров
+        torch.backends.cudnn.benchmark = True
 
         os.makedirs(self.checkpoint_dir, exist_ok=True)
         no_improve = 0
@@ -80,28 +83,28 @@ class Trainer:
             epoch_start = time.time()
             self.model.train()
             epoch_losses = []
-            optimizer.zero_grad()
 
-            for step, (anchor_ids, positive_ids, negative_ids) in enumerate(train_loader, 1):
-                anchor_ids = anchor_ids.to(self.device)
-                positive_ids = positive_ids.to(self.device)
-                negative_ids = negative_ids.to(self.device)
+            for anchor_ids, positive_ids, negative_ids in train_loader:
+                # Фьюзим 3 forward pass в 1: concat → model → split
+                fused = torch.cat(
+                    [anchor_ids, positive_ids, negative_ids], dim=0
+                ).to(self.device)
 
-                anchor_emb = self.model(anchor_ids)
-                positive_emb = self.model(positive_ids)
-                negative_emb = self.model(negative_ids)
+                optimizer.zero_grad(set_to_none=True)
+
+                fused_emb = self.model(fused)
+                bs = anchor_ids.size(0)
+                anchor_emb = fused_emb[:bs]
+                positive_emb = fused_emb[bs : 2 * bs]
+                negative_emb = fused_emb[2 * bs :]
 
                 loss = triplet_loss(
                     anchor_emb, positive_emb, negative_emb, self.margin
-                ) / grad_accum_steps
+                )
 
                 loss.backward()
-
-                if step % grad_accum_steps == 0:
-                    optimizer.step()
-                    optimizer.zero_grad()
-
-                epoch_losses.append(loss.item() * grad_accum_steps)
+                optimizer.step()
+                epoch_losses.append(loss.item())
 
             scheduler.step()
 
@@ -116,7 +119,11 @@ class Trainer:
                 "lr": lr,
             }
 
-            if val_data is not None and tokenizer is not None:
+            # Валидация каждые val_every эпох или на последней
+            do_val = (val_data is not None and tokenizer is not None
+                      and (epoch % val_every == 0 or epoch == epochs))
+
+            if do_val:
                 val_metrics = self._evaluate(val_data, tokenizer)
                 metrics.update(val_metrics)
 
@@ -131,9 +138,9 @@ class Trainer:
             self.history.append(metrics)
             self._log_epoch(metrics)
 
-            # Early stopping
+            # Early stopping (считаем только эпохи с валидацией)
             if patience > 0 and no_improve >= patience:
-                print(f"\n  Early stopping: R@1 не улучшался {patience} эпох.",
+                print(f"\n  Early stopping: R@1 не улучшался {patience} валидаций.",
                       flush=True)
                 break
 

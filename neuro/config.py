@@ -69,8 +69,8 @@ MIN_LEARNING_RATE = 1e-5
 # Размер батча
 BATCH_SIZE = 96
 
-# Gradient accumulation (эффективный batch = BATCH_SIZE × GRAD_ACCUM_STEPS)
-GRAD_ACCUM_STEPS = 2
+# Валидация каждые N эпох (ускоряет обучение)
+VAL_EVERY_N_EPOCHS = 3
 
 # Количество эпох (макс., ранняя остановка по patience)
 EPOCHS = 30
